@@ -2,25 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Actor
 {
-    public float speed;
-
-    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Aim(mousePos);
 
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
 
-        rb.AddForce(movement * speed);
+        Move(new Vector2(x, y));
     }
 }
