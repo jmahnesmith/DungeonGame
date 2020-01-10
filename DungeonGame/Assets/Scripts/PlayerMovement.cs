@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Actor
+public class PlayerMovement : Actor
 {
+
+    Vector2 movement;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +19,12 @@ public class Player : Actor
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Aim(mousePos);
 
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
 
-        Move(new Vector2(x, y));
+    }
+    private void FixedUpdate()
+    {
+        Move(new Vector2(movement.x, movement.y));
     }
 }
