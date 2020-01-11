@@ -4,51 +4,40 @@ using UnityEngine;
 
 public class Enemy : Actor
 {
-    public float stoppingDistance;
-    public float retreatDistance;
-
-    private float timeBtwShots;
-    public float startTimeBtwShots;
-
+    public Rigidbody2D player;
     public GameObject bullet;
-
-    public Transform player;
+    public float shootTimer = 2f;
+    private float startShootTimer;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        startShootTimer = shootTimer;
     }
 
     private void Update()
     {
-        if(Vector2.Distance(transform.position, player.position) > stoppingDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        }
-        else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
-        {
-            transform.position = this.transform.position;
-        }
-        else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-        }
-
-        if (timeBtwShots <= 0)
+        shootTimer -= Time.deltaTime;
+        if (shootTimer <= 0)
         {
             Shoot();
+            shootTimer = startShootTimer;
         }
-        else
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
+        
+    }
+
+    private void FixedUpdate()
+    {
+        Aim(rb.transform.position);
+        Move(new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y));
+        
+        
     }
 
     private void Shoot()
     {
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
-        rb.AddForce((player.position - transform.position) * 5f, ForceMode2D.Impulse);
-        timeBtwShots = startTimeBtwShots;
+        rb.AddForce((player.transform.position - transform.position) * 5f, ForceMode2D.Impulse);
     }
+    
 }
