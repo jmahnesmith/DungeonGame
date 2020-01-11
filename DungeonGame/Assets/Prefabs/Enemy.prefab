@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5579289225014820265}
   - component: {fileID: 6226794273559103808}
+  - component: {fileID: 8518727520577524338}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -79,3 +80,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8518727520577524338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518727520577524337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd6be3eb004d9a4fa67c247aca3750a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  stoppingDistance: 1
+  retreatDistance: 0.5
+  startTimeBtwShots: 1
+  bullet: {fileID: 2468361553768818435, guid: 21bb7a4dd6f742a4eb72ecf0daa7393c, type: 3}
+  player: {fileID: 0}

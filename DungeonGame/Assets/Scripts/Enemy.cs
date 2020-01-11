@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Actor
 {
-    public float speed;
     public float stoppingDistance;
     public float retreatDistance;
 
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+
+    public GameObject bullet;
+
     public Transform player;
-    private Shooting shooter;
 
     private void Start()
     {
-        shooter = FindObjectOfType<Shooting>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -32,6 +34,21 @@ public class Enemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
-        shooter.shoot(player.transform);
+        if (timeBtwShots <= 0)
+        {
+            Shoot();
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+    }
+
+    private void Shoot()
+    {
+        GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
+        rb.AddForce((player.position - transform.position) * 5f, ForceMode2D.Impulse);
+        timeBtwShots = startTimeBtwShots;
     }
 }

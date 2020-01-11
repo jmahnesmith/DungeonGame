@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : Actor
+public class Player : Actor
 {
 
     Vector2 movement;
