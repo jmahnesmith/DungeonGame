@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5579289225014820265}
   - component: {fileID: 6226794273559103808}
-  - component: {fileID: 8518727520577524338}
   - component: {fileID: 2128035070}
-  - component: {fileID: 2128035071}
+  - component: {fileID: 5797089094032718441}
+  - component: {fileID: 7383940723864825147}
+  - component: {fileID: 8518727520577524338}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,23 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8518727520577524338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8518727520577524337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd6be3eb004d9a4fa67c247aca3750a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4
-  rb: {fileID: 2128035070}
-  player: {fileID: 0}
-  bullet: {fileID: 2468361553768818435, guid: 21bb7a4dd6f742a4eb72ecf0daa7393c, type: 3}
-  shootTimer: 5
 --- !u!50 &2128035070
 Rigidbody2D:
   serializedVersion: 4
@@ -120,7 +104,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &2128035071
+--- !u!61 &5797089094032718441
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,3 +130,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!58 &7383940723864825147
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518727520577524337}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.7
+--- !u!114 &8518727520577524338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518727520577524337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd6be3eb004d9a4fa67c247aca3750a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  rb: {fileID: 2128035070}
+  player: {fileID: 0}
+  bullet: {fileID: 2468361553768818435, guid: 21bb7a4dd6f742a4eb72ecf0daa7393c, type: 3}
+  shootTimer: 5
+  pushForce: 5

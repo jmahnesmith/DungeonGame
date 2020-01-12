@@ -8,9 +8,15 @@ public class Enemy : Actor
     public GameObject bullet;
     public float shootTimer = 2f;
     private float startShootTimer;
+    public float pushForce;
+
+
+    float directionX;
+    float directionY;
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         startShootTimer = shootTimer;
     }
 
@@ -27,8 +33,10 @@ public class Enemy : Actor
 
     private void FixedUpdate()
     {
+        directionX = player.transform.position.x - transform.position.x;
+        directionY = player.transform.position.y - transform.position.y;
         Aim(rb.transform.position);
-        Move(new Vector2(player.transform.position.x - transform.position.x, player.transform.position.y - transform.position.y));
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         
         
     }
@@ -36,8 +44,20 @@ public class Enemy : Actor
     private void Shoot()
     {
         GameObject newBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-        Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
-        rb.AddForce((player.transform.position - transform.position) * 5f, ForceMode2D.Impulse);
+        Rigidbody2D bulletRB = newBullet.GetComponent<Rigidbody2D>();
+        bulletRB.AddForce((player.transform.position - transform.position) * 5f, ForceMode2D.Impulse);
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            var force = transform.position - collision.transform.position;
+            force.Normalize();
+
+            GetComponent<Rigidbody2D>().AddForce(-force * pushForce);
+        }
+    }
+
+
 }
