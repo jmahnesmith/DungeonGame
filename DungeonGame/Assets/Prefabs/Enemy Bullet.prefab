@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 682181319236256089}
   - component: {fileID: 127169631}
   - component: {fileID: 127169630}
-  - component: {fileID: -3927160545425964506}
+  - component: {fileID: -4707416665933040762}
   m_Layer: 0
   m_Name: Enemy Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -134,7 +134,7 @@ PolygonCollider2D:
       - {x: 0.0000000054639235, y: -0.0625}
       - {x: 0.05412659, y: -0.031249994}
       - {x: 0.05412659, y: 0.031249994}
---- !u!114 &-3927160545425964506
+--- !u!114 &-4707416665933040762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
