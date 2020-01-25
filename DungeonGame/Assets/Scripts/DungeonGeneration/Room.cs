@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
+    private EnemySpawner enemySpawner;
 
     public int width;
     public int height;
@@ -27,11 +28,14 @@ public class Room : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
+
         if(RoomController.instance == null)
         {
             return;
         }
+        //Cache EnemyController
+        enemySpawner = GetComponent<EnemySpawner>();
 
         Door[] ds = GetComponentsInChildren<Door>();
         foreach( Door d in ds)
@@ -152,5 +156,11 @@ public class Room : MonoBehaviour
         {
             RoomController.instance.OnPlayerEnterRoom(this);
         }
+        //Spawn Enemies
+        if(collision.tag == "Player")
+        {
+            enemySpawner.SpawnEnemies(this);   
+        }
+        
     }
 }

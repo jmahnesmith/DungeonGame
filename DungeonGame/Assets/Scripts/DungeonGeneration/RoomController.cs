@@ -20,6 +20,8 @@ public class RoomController : MonoBehaviour
 
     public List<PossibleRoom> possibleRooms = new List<PossibleRoom>();
 
+    private EnemySpawner enemyController;
+
     string currentWorldName = "Level1";
 
     RoomInfo currentLoadRoomData;
@@ -37,6 +39,7 @@ public class RoomController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        enemyController = GetComponent<EnemySpawner>();
     }
 
     private void Update()
@@ -167,5 +170,6 @@ public class RoomController : MonoBehaviour
     {
         CameraController.instance.currRoom = room;
         currRoom = room;
+
     }
 }
