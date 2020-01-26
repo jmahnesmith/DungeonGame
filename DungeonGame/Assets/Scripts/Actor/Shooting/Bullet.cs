@@ -13,6 +13,10 @@ public class Bullet : MonoBehaviour
             {
                 collision.GetComponent<Enemy>().TakeDamage(damage);
             }
+            if(collision.tag == "Player")
+            {
+                collision.GetComponent<Player>().TakeDamage(damage);
+            }
             Destroy(this.gameObject);
         }
         

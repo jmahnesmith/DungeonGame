@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class Player : Actor
 {
+    public int health = 100;
+    private int curHealth;
 
     Vector2 movement;
-
     Shooting shooting;
 
     // Start is called before the first frame update
     void Start()
     {
+        curHealth = health;
         shooting = GetComponent<Shooting>();
     }
-
-    // Update is called once per frame
-    void Update()
+    //Death logic
+    public void TakeDamage(int damage)
     {
+        curHealth = curHealth - damage;
+        if (curHealth <= 0)
+            Die();
+    }
+    private void Die()
+    {
+        Destroy(this.gameObject);
+        //Restart Game
+        GameManager.instance.RestartGame();
+    }
 
+    private void FixedUpdate()
+    {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Aim(mousePos);
+        Move(new Vector2(movement.x, movement.y));
 
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
@@ -29,10 +43,5 @@ public class Player : Actor
         {
             shooting.Shoot();
         }
-
-    }
-    private void FixedUpdate()
-    {
-        Move(new Vector2(movement.x, movement.y));
     }
 }

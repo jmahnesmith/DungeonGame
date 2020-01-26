@@ -115,7 +115,7 @@ public class RoomController : MonoBehaviour
     {
         string roomName = currentWorldName + info.name;
 
-        AsyncOperation loadRoom = SceneManager.LoadSceneAsync(roomName, LoadSceneMode.Additive);
+        AsyncOperation loadRoom = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(roomName, LoadSceneMode.Additive);
 
         while(loadRoom.isDone == false)
         {
