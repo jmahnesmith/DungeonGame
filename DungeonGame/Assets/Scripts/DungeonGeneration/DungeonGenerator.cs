@@ -19,7 +19,7 @@ public class DungeonGenerator : MonoBehaviour
         List<PossibleRoom> roomTypes = RoomController.instance.possibleRooms;
 
         RoomController.instance.LoadRoom("Start", 0, 0);
-        foreach(Vector2Int roomLocation in rooms)
+        foreach (Vector2Int roomLocation in rooms)
         {
             int randomRoomIndex = Random.Range(0, roomTypes.Count);
             PossibleRoom randomRoom = roomTypes[randomRoomIndex];

@@ -7,10 +7,13 @@ using Random = UnityEngine.Random;
 
 public class Enemy : Actor
 {
-    public Rigidbody2D player;
+    private Rigidbody2D player;
     public GameObject bullet;
     public Transform firePoint;
     public float bulletForce = 10f;
+
+    public int health;
+    private int curHealth;
 
     private float minDist = 1f;
 
@@ -26,27 +29,41 @@ public class Enemy : Actor
     public float biasStrength = 1f;
     public float radius = 5f;
 
+    private bool canMove = false;
+
     private void Start()
     {
+        StartCoroutine(SpawnEffect());
         movementBias = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)) * biasStrength;
 
         startShootTimer = shootTimer;
-        
+        player = FindObjectOfType<Player>().GetComponent<Rigidbody2D>();
+
+
     }
 
-    private void Update()
+    public void TakeDamage(int damage)
     {
-        
-
-        //shoot
-        shootTimer -= Time.deltaTime;
-        if (shootTimer <= 0)
+        curHealth = health - damage;
+        if (curHealth <= 0)
         {
-            Shoot();
-            shootTimer = startShootTimer;
+            Die();
         }
-        
     }
+
+    private void Die()
+    {
+
+    }
+
+    private IEnumerator SpawnEffect()
+    {
+        ParticleSystem particles = GetComponentInChildren<ParticleSystem>();
+        particles.Play();
+        yield return new WaitForSeconds(1);
+        canMove = true;
+    }
+
 
     private Vector2 Avoid()
     {
@@ -90,11 +107,22 @@ public class Enemy : Actor
 
     private void FixedUpdate()
     {
-        //Movement
-        xDir = (player.transform.position.x - transform.position.x);
-        yDir = (player.transform.position.y - transform.position.x);
-        Aim(player.transform.position);
-        Move(new Vector2(xDir, yDir) + movementBias + Avoid());
+        if(canMove)
+        {
+            //shoot
+            shootTimer -= Time.deltaTime;
+            if (shootTimer <= 0)
+            {
+                Shoot();
+                shootTimer = startShootTimer;
+            }
+            //Movement
+            xDir = (player.transform.position.x - transform.position.x);
+            yDir = (player.transform.position.y - transform.position.y);
+            Aim(player.transform.position);
+            Move(new Vector2(xDir, yDir) + movementBias + Avoid());
+        }
+        
         
     }
     private void Shoot()

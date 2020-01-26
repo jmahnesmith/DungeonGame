@@ -159,6 +159,7 @@ public class Room : MonoBehaviour
         //Spawn Enemies
         if(collision.tag == "Player")
         {
+            if(enemySpawner != null)
             enemySpawner.SpawnEnemies(this);   
         }
         
