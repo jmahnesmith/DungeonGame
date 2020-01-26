@@ -79,29 +79,35 @@ public class Room : MonoBehaviour
                 case Door.DoorType.right:
                     if(GetRight() == null)
                     {
-                        door.gameObject.SetActive(false);
+                        CloseDoor(door);
                     }
                     break;
                 case Door.DoorType.left:
                     if (GetLeft() == null)
                     {
-                        door.gameObject.SetActive(false);
+                        CloseDoor(door);
                     }
                     break;
                 case Door.DoorType.top:
                     if (GetTop() == null)
                     {
-                        door.gameObject.SetActive(false);
+                        CloseDoor(door);
                     }
                     break;
                 case Door.DoorType.bottom:
                     if (GetBottom() == null)
                     {
-                        door.gameObject.SetActive(false);
+                        CloseDoor(door);
                     }
                     break;
             }
         }
+    }
+
+    private static void CloseDoor(Door door)
+    {
+        door.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        door.GetComponentInChildren<SpriteRenderer>().color = Color.white;
     }
 
     public Room GetRight()
@@ -163,5 +169,18 @@ public class Room : MonoBehaviour
             enemySpawner.SpawnEnemies(this);   
         }
         
+    }
+    private void CloseDoors()
+    {
+        foreach (Door door in doors)
+        {
+            BoxCollider2D doorCollider = door.GetComponent<BoxCollider2D>();
+            doorCollider.enabled = true;
+            
+        }
+    }
+    private void OpenDoors()
+    {
+
     }
 }

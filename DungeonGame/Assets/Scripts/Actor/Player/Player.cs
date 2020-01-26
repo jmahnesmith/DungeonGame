@@ -30,18 +30,24 @@ public class Player : Actor
         GameManager.instance.RestartGame();
     }
 
+    private void Update()
+    {
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
+        if (Input.GetButtonDown("Fire1"))
+        {
+            shooting.Shoot();
+        }
+    }
+
     private void FixedUpdate()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Aim(mousePos);
         Move(new Vector2(movement.x, movement.y));
 
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
+        
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            shooting.Shoot();
-        }
+        
     }
 }
