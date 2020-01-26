@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int damage = 25;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag != "Bullet" && collision.tag != "Rooms")
-        Destroy(this.gameObject);
+        {
+            if(collision.tag == "Enemy")
+            {
+                collision.GetComponent<Enemy>().TakeDamage(damage);
+            }
+            Destroy(this.gameObject);
+        }
+        
     }
 }
