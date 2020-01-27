@@ -4944,8 +4944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2468361553768818435, guid: 21bb7a4dd6f742a4eb72ecf0daa7393c, type: 3}
   firePoint: {fileID: 3055418456456397873}
-  bulletForce: 10
-  shootTimer: 2
+  bulletForce: 3
+  shootTimer: 1
 --- !u!114 &8078952111922543338
 MonoBehaviour:
   m_ObjectHideFlags: 0

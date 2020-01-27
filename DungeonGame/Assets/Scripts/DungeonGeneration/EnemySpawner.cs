@@ -18,14 +18,10 @@ public class EnemySpawner : MonoBehaviour
     {
         BoxCollider2D roomCollider = room.GetComponent<BoxCollider2D>();
         Vector2 colliderPos = roomCollider.transform.position;
-        float randomPosX = Random.Range(colliderPos.x - (roomCollider.size.x + xOffSet) / 2, colliderPos.x + (roomCollider.size.x - xOffSet) / 2);
-        float randomPosY = Random.Range(colliderPos.y - (roomCollider.size.y + yOffSet) / 2, colliderPos.y + (roomCollider.size.y - yOffSet) / 2);
+        float randomPosX = Random.Range(colliderPos.x - (roomCollider.size.x + xOffSet) / 2, colliderPos.x + (roomCollider.size.x + xOffSet) / 2);
+        float randomPosY = Random.Range(colliderPos.y - (roomCollider.size.y + yOffSet) / 2, colliderPos.y + (roomCollider.size.y + yOffSet) / 2);
+        
         return new Vector2(randomPosX, randomPosY);
-    }
-
-    private void SetEnemyTarget()
-    {
-
     }
 
     /*private void OnDrawGizmos()
