@@ -77,7 +77,7 @@ public class Room : MonoBehaviour
             updatedDoors = true;
         }
 
-        if(enemyInRoom)
+        if(enemyInRoom && playerInRoom)
         {
             CloseDoors();
             doorsClosed = true;
@@ -197,8 +197,11 @@ public class Room : MonoBehaviour
             playerInRoom = true;
 
             //SpawnEnemies
-            if (enemySpawner != null)
+            if (enemySpawner != null && playerInRoom)
+            {
                 enemySpawner.SpawnEnemies(this);
+            }
+                
         }
 
         //Close / Open Doors
