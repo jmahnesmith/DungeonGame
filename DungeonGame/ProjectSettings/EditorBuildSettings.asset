@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon Rooms/Level1RotatingCenter.unity
     guid: 4153ebcf4a0b1ac4bbc06b97f8f24b2d
+  - enabled: 1
+    path: Assets/Scenes/Dungeon Rooms/Level1Cross.unity
+    guid: 61a954bee59f9ae4f980d277e55d126f
   m_configObjects: {}
