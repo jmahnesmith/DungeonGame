@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 3
+  active: 1
 --- !u!1 &24400139
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,6 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 1
+  active: 1
 --- !u!1 &818274040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +1899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 0
+  active: 1
 --- !u!1 &1522982884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,6 +2778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 2
+  active: 1
 --- !u!1 &114681648012938226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4503,10 +4507,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38881ae690d7e054bad1369ee83b619d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 20
-  height: 18
+  width: 22
+  height: 20
   x: 0
   y: 0
+  enemyInRoom: 0
+  playerInRoom: 0
+  doorsClosed: 0
+  updatedDoors: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}
