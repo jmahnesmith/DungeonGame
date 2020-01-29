@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6580701845842758428}
   - component: {fileID: 2815491681685840611}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 471908538562509165}
   - component: {fileID: 4101639976604634420}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1730036696765744960}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 1998565375955349288}
   - component: {fileID: 1706231803966862637}
   m_Layer: 11
-  m_Name: MazeRoom
+  m_Name: HorizontalMazeRoom
   m_TagString: Rooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 4107998352901842792}
   - component: {fileID: 5231839239785518837}
   - component: {fileID: 2003890947143912154}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Top Wall Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1480179008817344817}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 5016256060894770679}
   - component: {fileID: 7526235455991684813}
   - component: {fileID: 2757186906199455885}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Right Wall Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5103330184171724427}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5103330184579163485}
   - component: {fileID: 5103330184579163487}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Right Wall Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 5103330184726261468}
   - component: {fileID: 5103330184726261470}
   - component: {fileID: 5103330184726261471}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Top Wall Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5103330184906837427}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 5103330184988323033}
   - component: {fileID: 5103330184988323035}
   - component: {fileID: 5103330184988323032}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Bottom Wall Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1201,7 +1201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5103330185334156820}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: SideWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,7 +1312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5103330185461487774}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 5103330185670605503}
   - component: {fileID: 5103330185670605497}
   - component: {fileID: 5103330185670605502}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Left Wall Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1607,7 +1607,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5103330185689118591}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1745,7 +1745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6553743326057822592}
   - component: {fileID: 2450463782224272949}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1823,7 +1823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7613498033119175221}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Maze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,7 +1857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5778280591848797502}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1889,7 +1889,7 @@ GameObject:
   - component: {fileID: 83148562529661432}
   - component: {fileID: 3227033812688427714}
   - component: {fileID: 7131814499023207564}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Left Wall Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,7 +1995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3010159199900207459}
   - component: {fileID: 8479304102189877691}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2075,7 @@ GameObject:
   - component: {fileID: 1717847483679623600}
   - component: {fileID: 5784315148119510166}
   - component: {fileID: 8517583754347237720}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Bottom Wall Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2180,7 +2180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1079882640106544858}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
