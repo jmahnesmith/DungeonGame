@@ -12,7 +12,7 @@ public class DungeonGenerator : MonoBehaviour
     {
         dungeonRooms = DungeonCrawlerController.GenerateDungeon(dungeonGenerationData);
         SpawnRooms(dungeonRooms);
-        Invoke("UpdatePathfindingGrid", 3f);
+        Invoke("UpdatePathfindingGrid", 1f);
     }
 
     private void SpawnRooms(IEnumerable<Vector2Int> rooms)

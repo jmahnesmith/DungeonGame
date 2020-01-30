@@ -5,13 +5,29 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public GameObject enemy;
+    public GameObject[] enemies;
+    public int maxNumberOfSpawns = 4;
     public float xOffSet;
     public float yOffSet;
+
+    private int numberOfEnemies;
+    private int indexOfRandomEnemy;
+
+    private void Start()
+    {
+        numberOfEnemies = (int)Random.Range(1f, maxNumberOfSpawns);
+        
+    }
     public void SpawnEnemies(Room room)
     {
-        Vector2 randomPos = GetRandomPosition(room);
-        Instantiate(enemy, randomPos, Quaternion.identity);
+     
+        for (int i = 0; i < numberOfEnemies; i++)
+        {
+            Vector2 randomPos = GetRandomPosition(room);
+            indexOfRandomEnemy = Random.Range(0, enemies.Length);
+            Instantiate(enemies[indexOfRandomEnemy], randomPos, Quaternion.identity);
+        }
+        
     }
 
     private Vector2 GetRandomPosition(Room room)
@@ -23,6 +39,8 @@ public class EnemySpawner : MonoBehaviour
         
         return new Vector2(randomPosX, randomPosY);
     }
+
+
 
     /*private void OnDrawGizmos()
     {
