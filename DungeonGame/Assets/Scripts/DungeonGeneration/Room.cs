@@ -19,6 +19,8 @@ public class Room : MonoBehaviour
     private bool doorsClosed = false;
     [SerializeField]
     private bool updatedDoors = false;
+    [SerializeField]
+    private bool roomDefeated = false;
 
     public Room(int x, int y)
     {
@@ -213,14 +215,8 @@ public class Room : MonoBehaviour
     }
     private void SpawnEnemies()
     {
+        if(roomDefeated == false)
         enemySpawner.SpawnEnemies(this);
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-
-        
-
-
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -228,6 +224,7 @@ public class Room : MonoBehaviour
         {
             if (GameObject.FindGameObjectsWithTag("Enemy").Length - 1 == 0)
             enemyInRoom = false;
+            roomDefeated = true;
         }
         if (collision.tag == "Player")
         {

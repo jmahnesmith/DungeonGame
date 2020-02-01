@@ -20,14 +20,13 @@ public class EnemySpawner : MonoBehaviour
     }
     public void SpawnEnemies(Room room)
     {
-     
         for (int i = 0; i < numberOfEnemies; i++)
         {
             Vector2 randomPos = GetRandomPosition(room);
             indexOfRandomEnemy = Random.Range(0, enemies.Length);
             Instantiate(enemies[indexOfRandomEnemy], randomPos, Quaternion.identity);
         }
-        
+        Debug.Log("Spawning Enemies at " + room.name);
     }
 
     private Vector2 GetRandomPosition(Room room)
