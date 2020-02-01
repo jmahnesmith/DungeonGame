@@ -4,12 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
-    
-
-    private EnemyMovement enemyMovement;
 
     public int health;
     private int curHealth;
@@ -22,10 +20,10 @@ public class Enemy : MonoBehaviour
 
         StartCoroutine(SpawnEffect());
 
-        enemyMovement = GetComponent<EnemyMovement>();
-         
 
-        
+        GetComponent<AIPath>().isStopped = true;
+
+
 
         curHealth = health;
     }
@@ -50,7 +48,8 @@ public class Enemy : MonoBehaviour
         ParticleSystem particles = GetComponentInChildren<ParticleSystem>();
         particles.Play();
         yield return new WaitForSeconds(1);
-        enemyMovement.canMove = true;
+        GetComponent<AIPath>().isStopped = false;
+
     }
 
 

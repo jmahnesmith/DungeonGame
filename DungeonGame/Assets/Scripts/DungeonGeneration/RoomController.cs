@@ -156,7 +156,7 @@ public class RoomController : MonoBehaviour
         
     }
 
-    internal Room FindRoom(int x, int y)
+    public Room FindRoom(int x, int y)
     { 
         return loadedRooms.Find(item => item.x == x && item.y == y);
     }
@@ -171,5 +171,47 @@ public class RoomController : MonoBehaviour
         CameraController.instance.currRoom = room;
         currRoom = room;
 
+    }
+    private Room FindHighestYRoom()
+    {
+        Room highestYRoom = new Room(0,0);
+        int highestY = 0;
+        foreach (Room room in loadedRooms)
+        {
+            if (highestY <= room.y)
+            {
+                highestY = room.y;
+                highestYRoom = room;
+            }
+                
+        }
+        return highestYRoom;
+    }
+    private Room FindHighestXRoom()
+    {
+        Room highestXRoom = new Room(0, 0);
+        int highestX = 0;
+        foreach (Room room in loadedRooms)
+        {
+            if (highestX <= room.x)
+            {
+                highestX = room.x;
+                highestXRoom = room;
+            }
+
+        }
+        return highestXRoom;
+    }
+    public Room FindHighestXYRoom()
+    {
+        if(FindHighestXRoom().x >= FindHighestYRoom().y)
+        {
+            return FindHighestXRoom();
+        }
+        else
+        {
+            return FindHighestYRoom();
+        }
+        
     }
 }

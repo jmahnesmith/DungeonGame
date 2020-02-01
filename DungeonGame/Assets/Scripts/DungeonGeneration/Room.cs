@@ -25,6 +25,7 @@ public class Room : MonoBehaviour
         this.x = x;
         this.y = y;
     }
+    
 
     public Door leftDoor;
     public Door rightDoor;
@@ -199,7 +200,7 @@ public class Room : MonoBehaviour
             //SpawnEnemies
             if (enemySpawner != null && playerInRoom)
             {
-                enemySpawner.SpawnEnemies(this);
+                Invoke("SpawnEnemies", 0.2f);
             }
                 
         }
@@ -210,17 +211,22 @@ public class Room : MonoBehaviour
             enemyInRoom = true;
         }
     }
+    private void SpawnEnemies()
+    {
+        enemySpawner.SpawnEnemies(this);
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
+
         
-        
-        
+
 
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
         {
+            if (GameObject.FindGameObjectsWithTag("Enemy").Length - 1 == 0)
             enemyInRoom = false;
         }
         if (collision.tag == "Player")

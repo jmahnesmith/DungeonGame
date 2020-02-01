@@ -838,6 +838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648782395}
   - component: {fileID: 1648782394}
+  - component: {fileID: 1648782396}
   m_Layer: 0
   m_Name: Pathfinding
   m_TagString: Untagged
@@ -859,7 +860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACQn+sRmORNTgIAAPUEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMty2jAU/RVG69IxDo+mu9YQ0kUeE9rJxhshXWMNsuTRI0Ay/HuvZBs7dLpCnHPu1bkP+YMIZWtgTpu1EfxBcyDfRyScyZdRT97Dke602oh36DSvgrsyiGjUvFAnNOKTEGZ1Bc4I9kPtZBAnCHolCm2qFd9Bpq2zCBdUWkDKaBeiFUIfI3LEn/FtCDnhKV2E0zuebpPRGY8MlAPTSzthJ2tUXjFJqxp4sNyLb2adHE9RqLCcVhOsMy2lsK0X4k51rDWjtfVYCQq4oFhbNBD0JYhd6YLPYfBTUVhwrSlDT0thsEVNVvJTN32rqN03zt6o9NFAkk6jqSbrwz+C8STShdHVfXfxJAmXuFKw/Qs9MWrdoLNDePnZuVcHKvd0K+G1BPWo10Z7xZF0xodQbyFd9n8vtWUlsH2PN1avQF//fz6hhnMs/5hJUW0D9XXaABupY8Pj9MHgaH6h4bgbtk2BaHDxx8JvuhsuUUvcCWMdUm2VKtjbam+ClKxiz0I13mXaKIhwa7oGRaU7PWMadz3DK25w7RVzR8NzaS9vue4VXIVEuNcnyRX1rA+XYdlSHx7Alk/eSaGgNx2IR+xTppVqVmzYky5s401B2SBs5wX/vFqEb28W29l0cctSPpndfBsvpgnwdA7zeZqyOZ+SuHtCYZ1UPjdG2/bg1FSfXOGedV+R0drQOq47N/SwFu+VHrRcqEJvmAFQT02Gi3EweAk+S77iAhu0AeeEivMmHzmRmu2B55dEeax0dXSG5n2WnNTiTbuA5CSLn42cnMn5L1BLAwQUAAAICAAAkJ/ruz8bgGwAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNRRUEovSizIKAaKgDmlmSkgdrRSSpKxeZKpibllslGKoamxha65iUFqipFZqpmZkVGyWYqJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+sRmORNTgIAAPUEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+u7PxuAbAAAAHgAAAAJACQAAAAAAAAAAAAAAJsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAUgMAAAAA
+    dataString: UEsDBBQAAAgIAACQn+tP9GlakQIAAIEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VF1v2jAU/SvIz+sUUgrr3rZA6Sa1RWNTH5Y+GPuGWDh25I8Crfjvu3aSJmWbhBRz77nX59wPvxKhbA3MabM0gt9pDuTziIQz+TDqnbdwoFut1uIFOsyj4K4MIBoxP6gTGu3jEGZ1Bc4I9kVtZQAnaPRKFNpUC76FTFtn0VxQaQFdRrsQrdD0OiIH/Fxch5AjntJZOL3g6ToZnfDIQDkwPbQDdrAG5RWTtKqBB8o9+DLp4HiKQIVyWkygzrSUwrZciDvWUWtGa+tRCQK4oKgtEgj4EsS2dIHnMPihKCy4lpShx7kwWKImK/mqm7pV1O4aZs9U+kggSSeRVJP17i/AxTi6C6Or2+7icZTkSsF2P+iRUesGlR2a5++Ze7Wnckc3Eh5LUPd6abRXHJ3O+BDqLaTz/u+btqwEtuvtDdUzo6//35+g4RTlHzIpqk1wfZw0hrXUseCx+2CwNd+QcJwN26ZAa2Dxy8JPuh0OUeu4EcY6dLUqVaC30d4EKFnEmgU13mXaKIjmlnQNikp3XGEad97DM9/g2jPPDQ3r0l7e+rotOAuJ5h6fJGeuld73zbLw3Vf1Sgvl1kANKwf5bKn3d2DLB++kUNArCo57LGKmlWrmz/4jbO1NQdkgzMHBeQNz6mjcAuSEU8KHoVjQGKG8lGEgo4qQ/DeqCL+nUOSS4r0ymsm9VnF/3n2fwiBsveDvx5zwzeVsczWZXbOUj68uP13MJgnwdArTaZqyKZ+QuAdCYc2pXDVFa1uFE6R6LQpnvnvRRktD67h63ND9UrxUetB+oQq9ZgZAPTQZ3sSCwUvwieALLlDmGpwTKs4eec2J1GwHPH9LlMfCLg7O0LzPkpNaPGsXLDnJ4hOWkxM5/QFQSwMEFAAACAgAAJCf69+pdPhtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPWMzTQUVBKL0osyCgGihiCOKWZKSB2tFJKkrF5kqmJuWWyUYqhqbGFrrmJQWqKkVmqmZmRUbJZiolSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJCf60/0aVqRAgAAgQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJCf69+pdPhtAAAAeAAAAAkAJAAAAAAAAAAAAAAA3gIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAACWAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -887,7 +888,39 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
@@ -914,6 +947,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648782396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648782393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef7bb18ee942034e95f176f0341e20e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1831006507
 GameObject:
   m_ObjectHideFlags: 0

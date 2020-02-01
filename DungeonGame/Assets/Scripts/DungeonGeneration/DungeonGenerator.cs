@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Pathfinding;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class DungeonGenerator : MonoBehaviour
     {
         dungeonRooms = DungeonCrawlerController.GenerateDungeon(dungeonGenerationData);
         SpawnRooms(dungeonRooms);
-        Invoke("UpdatePathfindingGrid", 1f);
+        Invoke("StartUpdatePathfindingGrid", 1f);
     }
 
     private void SpawnRooms(IEnumerable<Vector2Int> rooms)
@@ -45,9 +46,20 @@ public class DungeonGenerator : MonoBehaviour
         
     }
 
-    private void UpdatePathfindingGrid()
+    private void StartUpdatePathfindingGrid()
     {
-        AstarPath.active = FindObjectOfType<AstarPath>();
-        AstarPath.active.Scan();
+        StartCoroutine(UpdatePathfindingGrid());
     }
+
+    IEnumerator UpdatePathfindingGrid()
+    {
+        foreach (Progress progress in AstarPath.active.ScanAsync())
+        {
+            
+            Debug.Log("Scanning... " + progress.description + " - " + (progress.progress * 100).ToString("0") + "%");
+            yield return null;
+        }
+    }
+
+    
 }
