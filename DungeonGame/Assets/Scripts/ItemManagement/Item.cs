@@ -2,22 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item
+public class Item : MonoBehaviour
 {
+    public int itemID;
     public string itemName;
-    public int ID;
-    public ItemBuff[] buffs;
-    public Item(ItemObject item)
-    {
-        itemName = item.name;
-        ID = item.ID;
-        buffs = new ItemBuff[item.buffs.Length];
-        for(int i = 0; i < buffs.Length; i++)
-        {
-            buffs[i] = new ItemBuff(item.buffs[i].min, item.buffs[i].max)
-            {
-                attribute = item.buffs[i].attribute
-            };
-        }
-    }
+    public string itemDesc;
+
+    
+
 }
