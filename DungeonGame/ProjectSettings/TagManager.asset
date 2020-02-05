@@ -8,6 +8,7 @@ TagManager:
   - SpawnPoint
   - Rooms
   - Enemy
+  - GunSlot
   layers:
   - Default
   - TransparentFX
