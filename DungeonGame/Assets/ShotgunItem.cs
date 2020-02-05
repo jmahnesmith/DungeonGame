@@ -7,11 +7,13 @@ public class ShotgunItem : Item, IEquipable
     private GameObject player;
     private void Start()
     {
-        GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
     public void Equip()
     {
-        Debug.Log(player.GetComponentInChildren<GameObject>().name);
+        transform.SetParent(player.transform);
+        transform.rotation = player.transform.rotation;
+
     }
     
 }

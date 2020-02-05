@@ -7,9 +7,22 @@ public class Shooting : MonoBehaviour
     public Transform[] firePoint;
     public GameObject bulletPrefab;
 
+    private Vector2 movement;
+
     public float bulletForce = 20f;
 
-    public void Shoot()
+    private void Update()
+    {
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }
+    }
+    
+
+public void Shoot()
     {
         for (int i = 0; i < firePoint.Length; i++)
         {

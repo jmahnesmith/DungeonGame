@@ -34,10 +34,6 @@ public class Player : Actor
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
-        if (Input.GetButtonDown("Fire1"))
-        {
-            shooting.Shoot();
-        }
     }
 
     private void FixedUpdate()

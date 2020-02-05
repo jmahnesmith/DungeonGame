@@ -1,2 +1,12 @@
-Base path: C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/2019.1.3f1/Editor/Data
+Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=708 outsize=708 ok=1
+Cmd: preprocess
+  insize=883 outsize=883 ok=1
+Cmd: preprocess
+  insize=2706 outsize=487 ok=1
+Cmd: preprocess
+  insize=2309 outsize=864 ok=1
+Cmd: preprocess
+  insize=2555 outsize=2555 ok=1
