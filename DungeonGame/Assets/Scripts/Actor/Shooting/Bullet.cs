@@ -9,14 +9,15 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag != "Bullet" && collision.tag != "Rooms")
         {
-            if(collision.tag == "Enemy")
-            {
-                collision.GetComponent<Enemy>().TakeDamage(damage);
-            }
             if(collision.tag == "Player")
             {
-                collision.GetComponent<Player>().TakeDamage(damage);
+                collision.GetComponent<Health>().TakeDamage(damage);
             }
+            else if(collision.tag == "Enemy")
+            {
+                collision.GetComponent<Health>().TakeDamage(damage);
+            }
+            
             Destroy(this.gameObject);
         }
         

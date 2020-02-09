@@ -15,5 +15,13 @@ public class ShotgunItem : Item, IEquipable
         transform.rotation = player.transform.rotation;
 
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            Equip();
+        }
+    }
+
 }

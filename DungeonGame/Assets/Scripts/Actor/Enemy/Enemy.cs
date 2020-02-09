@@ -9,39 +9,20 @@ using Pathfinding;
 public class Enemy : MonoBehaviour
 {
 
-    public int health;
-    private int curHealth;
-
-
-
-
     private void Start()
     {
 
         StartCoroutine(SpawnEffect());
 
-
         GetComponent<AIPath>().isStopped = true;
 
-
-
-        curHealth = health;
     }
 
-    public void TakeDamage(int damage)
-    {
-        curHealth = curHealth - damage;
-        if (curHealth <= 0)
-        {
-            Die();
-            //TODO Explode Effect
-        }
-    }
-
-    private void Die()
+    private void OnDeath()
     {
         Destroy(this.gameObject);
     }
+
 
     private IEnumerator SpawnEffect()
     {
