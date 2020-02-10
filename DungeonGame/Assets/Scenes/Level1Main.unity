@@ -429,6 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1082741860}
   - component: {fileID: 1082741859}
+  - component: {fileID: 1082741861}
   m_Layer: 8
   m_Name: PostProcessing
   m_TagString: Untagged
@@ -467,6 +468,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082741861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082741858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1dcb42dca1344d45ad0224d96234c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 15
+  timeStep: 0.67
+  timeToBeat: 1
+  restSmoothTime: 4
+  maxBloomIntensity: 18
+  minBloomIntensity: 10
+  postProcessProfile: {fileID: 11400000, guid: f46ca3be3cf5f234f9b33218eb9e29a4, type: 2}
 --- !u!1 &1120742978
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1591004057}
   - component: {fileID: 1591004056}
+  - component: {fileID: 1591004058}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -750,6 +771,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1591004058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591004055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29184ea63e2fd8c4b860122d137ae05b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1648782393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,6 +1123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7025547702889846856, guid: db2e893f1cf0a964b8d6d1e9710b5aff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7025547702889846863, guid: db2e893f1cf0a964b8d6d1e9710b5aff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1145,5 +1183,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4505084756942807066, guid: db2e893f1cf0a964b8d6d1e9710b5aff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: db2e893f1cf0a964b8d6d1e9710b5aff, type: 3}

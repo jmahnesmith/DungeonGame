@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1240415999602084300}
   - component: {fileID: 2571641276659851986}
   - component: {fileID: 2838411927146370613}
+  - component: {fileID: 4505084756942807066}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -188,3 +189,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &4505084756942807066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7025547702889846856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7309ce725e7a31a4c85be1d11fb21a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 5
+  timeStep: 0.15
+  timeToBeat: 0.05
+  restSmoothTime: 2
+  beatColors:
+  - {r: 1, g: 0, b: 0.36031818, a: 1}
+  - {r: 1, g: 0, b: 0.8311391, a: 1}
+  - {r: 0.5735564, g: 0, b: 1, a: 0}
+  - {r: 0, g: 0.40600348, b: 1, a: 0}
+  - {r: 0, g: 1, b: 0.9903991, a: 0}
+  restColor: {r: 1, g: 0.5803922, b: 0, a: 1}
