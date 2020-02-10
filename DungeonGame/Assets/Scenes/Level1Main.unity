@@ -484,7 +484,7 @@ MonoBehaviour:
   timeStep: 0.67
   timeToBeat: 1
   restSmoothTime: 4
-  maxBloomIntensity: 18
+  maxBloomIntensity: 17
   minBloomIntensity: 10
   postProcessProfile: {fileID: 11400000, guid: f46ca3be3cf5f234f9b33218eb9e29a4, type: 2}
 --- !u!1 &1120742978
@@ -1123,11 +1123,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7025547702889846856, guid: db2e893f1cf0a964b8d6d1e9710b5aff,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7025547702889846863, guid: db2e893f1cf0a964b8d6d1e9710b5aff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1183,6 +1178,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4505084756942807066, guid: db2e893f1cf0a964b8d6d1e9710b5aff, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db2e893f1cf0a964b8d6d1e9710b5aff, type: 3}
