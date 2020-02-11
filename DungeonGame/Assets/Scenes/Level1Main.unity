@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bias: 15
-  timeStep: 0.67
+  timeStep: 0.65
   timeToBeat: 1
   restSmoothTime: 4
   maxBloomIntensity: 17

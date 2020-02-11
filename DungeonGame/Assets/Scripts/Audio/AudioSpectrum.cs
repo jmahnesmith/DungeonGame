@@ -7,11 +7,12 @@ using UnityEngine;
 /// </summary>
 public class AudioSpectrum : MonoBehaviour
 {
+    AudioSource music;
 
     private void Update()
     {
         // get the data
-        AudioListener.GetSpectrumData(m_audioSpectrum, 0, FFTWindow.Hamming);
+        music.GetSpectrumData(m_audioSpectrum, 0, FFTWindow.Hamming);
 
         // assign spectrum value
         // this "engine" focuses on the simplicity of other classes only..
@@ -24,6 +25,7 @@ public class AudioSpectrum : MonoBehaviour
 
     private void Start()
     {
+        music = GetComponent<AudioSource>();
         /// initialize buffer
         m_audioSpectrum = new float[128];
     }
