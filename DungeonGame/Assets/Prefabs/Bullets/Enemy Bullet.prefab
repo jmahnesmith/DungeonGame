@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 682181319236256089}
   - component: {fileID: 127169631}
   - component: {fileID: 127169630}
-  - component: {fileID: -5642950436371907559}
-  - component: {fileID: 7739333583619783217}
+  - component: {fileID: -4707416665933040762}
+  - component: {fileID: 2623666763317354756}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Enemy Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: c7a0250075b9bdc4ba8577a943e01c73, type: 3}
-  m_Color: {r: 1, g: 0.5882353, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.23522091, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -135,7 +135,7 @@ PolygonCollider2D:
       - {x: 0.0000000054639235, y: -0.0625}
       - {x: 0.05412659, y: -0.031249994}
       - {x: 0.05412659, y: 0.031249994}
---- !u!114 &-5642950436371907559
+--- !u!114 &-4707416665933040762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
---- !u!82 &7739333583619783217
+--- !u!82 &2623666763317354756
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,7 +158,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9be91b11cfd851249b282bb84a802337, type: 3}
+  m_audioClip: {fileID: 8300000, guid: de028324ad0d85f469f975f100101916, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -172,7 +172,7 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:

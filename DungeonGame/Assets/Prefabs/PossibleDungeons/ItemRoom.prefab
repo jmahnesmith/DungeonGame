@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 1998565375955349289}
   - component: {fileID: 1998565375955349288}
   - component: {fileID: 1706231803966862637}
+  - component: {fileID: 7749629521795681224}
   m_Layer: 11
   m_Name: ItemRoom
   m_TagString: Rooms
@@ -216,6 +217,20 @@ MonoBehaviour:
   maxNumberOfSpawns: 6
   xOffSet: -4
   yOffSet: -4
+--- !u!114 &7749629521795681224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998565375955349294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e71b058fc58d38428ae035481529fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefabs:
+  - {fileID: 6479344749035688830, guid: 4fe4c258a1c0ad845a92fa276252110b, type: 3}
 --- !u!1 &2003890947143912155
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +484,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7137821861615361339}
-  - component: {fileID: 4207274284157942881}
   m_Layer: 0
   m_Name: ItemSpawner
   m_TagString: Untagged
@@ -491,18 +505,6 @@ Transform:
   m_Father: {fileID: 7422539220493519133}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4207274284157942881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4211015514032801426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e71b058fc58d38428ae035481529fc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5103330183947085641
 GameObject:
   m_ObjectHideFlags: 0

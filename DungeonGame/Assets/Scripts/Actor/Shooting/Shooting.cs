@@ -7,22 +7,36 @@ public class Shooting : MonoBehaviour
     public Transform[] firePoint;
     public GameObject bulletPrefab;
 
-    private Vector2 movement;
+    public AudioSource firingSound;
 
     public float bulletForce = 20f;
+    public float fireRate = 0.5f;
+    private float nextFire = 0.0f;
+
+    private Vector2 movement;
+
+    public bool canShoot;
+
+    private void Start()
+    {
+        firingSound = GetComponent<AudioSource>();
+        canShoot = false;
+    }
 
     private void Update()
     {
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1") && canShoot && Time.time > nextFire)
         {
+            nextFire = Time.time + fireRate;
             Shoot();
+            PlayShootingSound();
         }
     }
     
 
-public void Shoot()
+    public void Shoot()
     {
         for (int i = 0; i < firePoint.Length; i++)
         {
@@ -31,10 +45,24 @@ public void Shoot()
 
             rb.AddForce(firePoint[i].up * bulletForce, ForceMode2D.Impulse);
 
+
             Destroy(bullet, 10f);
         }
-        
 
-        
+
+
+    }
+
+    private void PlayShootingSound()
+    {
+        AudioSource.PlayClipAtPoint(firingSound.clip, Camera.main.transform.position);
+    }
+
+    public void ToggleShooting()
+    {
+        if (!canShoot)
+            canShoot = true;
+        else if (canShoot)
+            canShoot = false;
     }
 }

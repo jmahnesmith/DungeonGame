@@ -2,26 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotgunItem : Item, IEquipable
+public class ShotgunItem : Item
 {
     private GameObject player;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
-    public void Equip()
+    public override void Equip(GameObject player, GameObject item)
     {
-        transform.SetParent(player.transform);
-        transform.rotation = player.transform.rotation;
-
+        base.Equip(player, this.gameObject);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.tag == "Player" && !isEquiped)
         {
-            Equip();
+            Equip(player, this.gameObject);
+            AddToInventory(this);
+            if(GetComponent<Shooting>())
+            GetComponent<Shooting>().ToggleShooting();
         }
     }
+
+    
+
+    
 
 }
