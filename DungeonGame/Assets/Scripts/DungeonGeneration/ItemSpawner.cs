@@ -18,14 +18,18 @@ public class ItemSpawner : MonoBehaviour
 
     private void SpawnItem()
     {
-        room = GetComponent<Room>();
-        roomX = room.x;
-        roomY = room.y;
+        if(GetComponent<Room>() != null)
+        {
+            room = GetComponent<Room>();
+            roomX = room.x;
+            roomY = room.y;
 
-        int randomNumber = Random.Range(0, itemPrefabs.Length);
-        Instantiate(itemPrefabs[randomNumber], RoomController.instance.FindRoom(roomX, roomY).GetRoomCenter(), Quaternion.identity);
+            int randomNumber = Random.Range(0, itemPrefabs.Length);
+            Instantiate(itemPrefabs[randomNumber], RoomController.instance.FindRoom(roomX, roomY).GetRoomCenter(), Quaternion.identity);
 
-        Debug.Log("Spawning Item...");
-        FindObjectOfType<DungeonGenerator>().GenerationCompleteEvent -= SpawnItem;
+            Debug.Log("Spawning Item...");
+            FindObjectOfType<DungeonGenerator>().GenerationCompleteEvent -= SpawnItem;
+        }
+        
     }
 }

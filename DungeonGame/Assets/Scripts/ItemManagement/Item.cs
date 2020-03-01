@@ -18,8 +18,10 @@ public class Item : MonoBehaviour
 
     public virtual void Equip(GameObject player, GameObject item)
     {
-        item.transform.SetParent(player.transform);
+        item.transform.position = player.transform.position;
         item.transform.rotation = player.transform.rotation;
+        item.transform.SetParent(player.transform);
+        
         isEquiped = true;
     }
 

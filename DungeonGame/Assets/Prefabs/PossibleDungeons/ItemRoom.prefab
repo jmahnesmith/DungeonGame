@@ -120,7 +120,6 @@ GameObject:
   - component: {fileID: 7422539220493519133}
   - component: {fileID: 1998565375955349289}
   - component: {fileID: 1998565375955349288}
-  - component: {fileID: 1706231803966862637}
   - component: {fileID: 7749629521795681224}
   m_Layer: 11
   m_Name: ItemRoom
@@ -198,25 +197,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 33.5, y: 17.5}
   m_EdgeRadius: 0
---- !u!114 &1706231803966862637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998565375955349294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb2dbbba495fb294c80196cefe239395, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 8518727520577524337, guid: 8b4a9c691bbe02a468b8cda1aa016dae, type: 3}
-  - {fileID: 8518727520577524337, guid: 0f6cea4f829b8984fb5d4e0855e567c7, type: 3}
-  - {fileID: 8518727520577524337, guid: 2b1e50712873aae45952d042e4df487f, type: 3}
-  maxNumberOfSpawns: 6
-  xOffSet: -4
-  yOffSet: -4
 --- !u!114 &7749629521795681224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +224,7 @@ GameObject:
   - component: {fileID: 2003890947143912154}
   m_Layer: 10
   m_Name: Top Wall Left
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,7 +361,7 @@ GameObject:
   - component: {fileID: 2757186906199455885}
   m_Layer: 10
   m_Name: Right Wall Up
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -620,7 +600,7 @@ GameObject:
   - component: {fileID: 5103330184579163487}
   m_Layer: 10
   m_Name: Right Wall Bottom
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,7 +681,7 @@ GameObject:
   - component: {fileID: 5103330184726261471}
   m_Layer: 10
   m_Name: Top Wall Right
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -911,7 +891,7 @@ GameObject:
   - component: {fileID: 5103330184988323032}
   m_Layer: 10
   m_Name: Bottom Wall Right
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1095,7 +1075,7 @@ GameObject:
   - component: {fileID: 5103330185334156820}
   m_Layer: 10
   m_Name: SideWalls
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1396,7 +1376,7 @@ GameObject:
   - component: {fileID: 5103330185670605502}
   m_Layer: 10
   m_Name: Left Wall Bottom
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1670,7 +1650,7 @@ GameObject:
   - component: {fileID: 7131814499023207564}
   m_Layer: 10
   m_Name: Left Wall Up
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1777,7 +1757,7 @@ GameObject:
   - component: {fileID: 8517583754347237720}
   m_Layer: 10
   m_Name: Bottom Wall Left
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

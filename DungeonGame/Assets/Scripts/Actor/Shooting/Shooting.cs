@@ -6,8 +6,9 @@ public class Shooting : MonoBehaviour
 {
     public Transform[] firePoint;
     public GameObject bulletPrefab;
+    public CameraShake cameraShake;
 
-    public AudioSource firingSound;
+    public AudioClip firingSound;
 
     public float bulletForce = 20f;
     public float fireRate = 0.5f;
@@ -19,7 +20,6 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        firingSound = GetComponent<AudioSource>();
         canShoot = false;
     }
 
@@ -31,6 +31,8 @@ public class Shooting : MonoBehaviour
         {
             nextFire = Time.time + fireRate;
             Shoot();
+            StartCoroutine(cameraShake.Shake(0.1f, 0.1f));
+            
             PlayShootingSound();
         }
     }
@@ -55,7 +57,7 @@ public class Shooting : MonoBehaviour
 
     private void PlayShootingSound()
     {
-        AudioSource.PlayClipAtPoint(firingSound.clip, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(firingSound, Camera.main.transform.position);
     }
 
     public void ToggleShooting()

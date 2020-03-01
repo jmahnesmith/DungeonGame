@@ -163,6 +163,7 @@ MonoBehaviour:
   playerInRoom: 0
   doorsClosed: 0
   updatedDoors: 0
+  roomDefeated: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}
@@ -207,7 +208,7 @@ GameObject:
   - component: {fileID: 2003890947143912154}
   m_Layer: 10
   m_Name: Top Wall Left
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -344,7 +345,7 @@ GameObject:
   - component: {fileID: 2757186906199455885}
   m_Layer: 10
   m_Name: Right Wall Up
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,7 +555,7 @@ GameObject:
   - component: {fileID: 2080443000867865373}
   m_Layer: 10
   m_Name: Right Wall Bottom
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -661,7 +662,7 @@ GameObject:
   - component: {fileID: 5103330184726261471}
   m_Layer: 10
   m_Name: Top Wall Right
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -871,7 +872,7 @@ GameObject:
   - component: {fileID: 6960307283060878127}
   m_Layer: 10
   m_Name: Bottom Wall Right
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1055,7 +1056,7 @@ GameObject:
   - component: {fileID: 5103330185334156820}
   m_Layer: 10
   m_Name: SideWalls
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1356,7 +1357,7 @@ GameObject:
   - component: {fileID: 5103330185670605502}
   m_Layer: 10
   m_Name: Left Wall Bottom
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1630,7 +1631,7 @@ GameObject:
   - component: {fileID: 7131814499023207564}
   m_Layer: 10
   m_Name: Left Wall Up
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1737,7 +1738,7 @@ GameObject:
   - component: {fileID: 8517583754347237720}
   m_Layer: 10
   m_Name: Bottom Wall Left
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

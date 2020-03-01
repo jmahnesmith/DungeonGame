@@ -5,13 +5,15 @@ using UnityEngine;
 public class EnemyShoot : MonoBehaviour
 {
     public GameObject bullet;
-    public Transform firePoint;
+    public Transform[] firePointArray;
     public float bulletForce = 10f;
 
     private Rigidbody2D player;
 
     public float shootTimer = 2f;
     private float startShootTimer;
+
+    public bool shootFoward;
 
 
 
@@ -30,9 +32,21 @@ public class EnemyShoot : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject newBullet = Instantiate(bullet, firePoint.transform.position, Quaternion.identity);
-        Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
-        rb.AddForce((player.transform.position - transform.position) * bulletForce, ForceMode2D.Impulse);
+        for (int i = 0; i < firePointArray.Length; i++)
+        {
+            GameObject newBullet = Instantiate(bullet, firePointArray[i].transform.position, Quaternion.identity);
+            Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
+            if(shootFoward)
+            {
+                rb.AddForce(firePointArray[i].up * bulletForce, ForceMode2D.Impulse);
+            }
+            else
+            rb.AddForce((player.transform.position - transform.position) * bulletForce, ForceMode2D.Impulse);
+
+            Destroy(newBullet, 10f);
+        }
+        
+        
     }
     private void ShootOnTimer()
     {

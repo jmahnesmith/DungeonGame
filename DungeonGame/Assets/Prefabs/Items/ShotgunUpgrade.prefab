@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2212568573329451039}
   m_LocalRotation: {x: 0, y: 0, z: -0.13052624, w: 0.9914449}
-  m_LocalPosition: {x: 0.6717, y: 1.4085999, z: 0}
+  m_LocalPosition: {x: 0.6717, y: 0.8, z: 0}
   m_LocalScale: {x: 13, y: 13, z: 1}
   m_Children: []
   m_Father: {fileID: 6479344749035688825}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6479344747572800122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0607, y: 1.4085999, z: 0}
+  m_LocalPosition: {x: 0.0607, y: 0.8, z: 0}
   m_LocalScale: {x: 13, y: 13, z: 1}
   m_Children: []
   m_Father: {fileID: 6479344749035688825}
@@ -158,9 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd657740294aac448bfaf5fba539b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 0
-  itemName: Shotgun
-  itemDesc: Blast that ass
+  itemID: 1
+  itemName: Pistol
+  itemDesc: Pew Pew
+  isEquiped: 0
 --- !u!114 &6479344749035688826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,8 +180,11 @@ MonoBehaviour:
   - {fileID: 5373005928025699283}
   bulletPrefab: {fileID: 2468361553768818435, guid: 0e8e311c2386b924ea35950ebc0c8d9b,
     type: 3}
-  firingSound: {fileID: 0}
+  cameraShake: {fileID: 0}
+  firingSound: {fileID: 8300000, guid: 9be91b11cfd851249b282bb84a802337, type: 3}
   bulletForce: 20
+  fireRate: 1.75
+  canShoot: 0
 --- !u!61 &538880419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -327,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7791125361968055407}
   m_LocalRotation: {x: 0, y: 0, z: 0.13052616, w: 0.9914449}
-  m_LocalPosition: {x: -0.5503, y: 1.4085999, z: 0}
+  m_LocalPosition: {x: -0.5503, y: 0.8, z: 0}
   m_LocalScale: {x: 13, y: 13, z: 1}
   m_Children: []
   m_Father: {fileID: 6479344749035688825}

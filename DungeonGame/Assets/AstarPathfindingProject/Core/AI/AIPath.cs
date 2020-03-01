@@ -60,18 +60,25 @@ namespace Pathfinding {
 	/// </summary>
 	[AddComponentMenu("Pathfinding/AI/AIPath (2D,3D)")]
 	public partial class AIPath : AIBase, IAstarAI {
-		/// <summary>
-		/// How quickly the agent accelerates.
-		/// Positive values represent an acceleration in world units per second squared.
-		/// Negative values are interpreted as an inverse time of how long it should take for the agent to reach its max speed.
-		/// For example if it should take roughly 0.4 seconds for the agent to reach its max speed then this field should be set to -1/0.4 = -2.5.
-		/// For a negative value the final acceleration will be: -acceleration*maxSpeed.
-		/// This behaviour exists mostly for compatibility reasons.
-		///
-		/// In the Unity inspector there are two modes: Default and Custom. In the Default mode this field is set to -2.5 which means that it takes about 0.4 seconds for the agent to reach its top speed.
-		/// In the Custom mode you can set the acceleration to any positive value.
-		/// </summary>
-		public float maxAcceleration = -2.5f;
+        ///MyCode
+        ///
+        private void Start()
+        {
+            maxSpeed = Random.Range(maxSpeed, maxSpeed + 2);
+        }
+
+        /// <summary>
+        /// How quickly the agent accelerates.
+        /// Positive values represent an acceleration in world units per second squared.
+        /// Negative values are interpreted as an inverse time of how long it should take for the agent to reach its max speed.
+        /// For example if it should take roughly 0.4 seconds for the agent to reach its max speed then this field should be set to -1/0.4 = -2.5.
+        /// For a negative value the final acceleration will be: -acceleration*maxSpeed.
+        /// This behaviour exists mostly for compatibility reasons.
+        ///
+        /// In the Unity inspector there are two modes: Default and Custom. In the Default mode this field is set to -2.5 which means that it takes about 0.4 seconds for the agent to reach its top speed.
+        /// In the Custom mode you can set the acceleration to any positive value.
+        /// </summary>
+        public float maxAcceleration = -2.5f;
 
 		/// <summary>
 		/// Rotation speed in degrees per second.

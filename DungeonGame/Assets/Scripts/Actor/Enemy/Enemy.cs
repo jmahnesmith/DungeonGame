@@ -18,11 +18,6 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void OnDeath()
-    {
-        Destroy(this.gameObject);
-    }
-
 
     private IEnumerator SpawnEffect()
     {

@@ -9,6 +9,7 @@ TagManager:
   - Rooms
   - Enemy
   - GunSlot
+  - Walls
   layers:
   - Default
   - TransparentFX

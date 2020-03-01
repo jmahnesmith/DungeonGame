@@ -165,6 +165,7 @@ MonoBehaviour:
   playerInRoom: 0
   doorsClosed: 0
   updatedDoors: 0
+  roomDefeated: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}
@@ -212,6 +213,12 @@ MonoBehaviour:
   - {fileID: 8518727520577524337, guid: 8b4a9c691bbe02a468b8cda1aa016dae, type: 3}
   - {fileID: 8518727520577524337, guid: 0f6cea4f829b8984fb5d4e0855e567c7, type: 3}
   - {fileID: 8518727520577524337, guid: 2b1e50712873aae45952d042e4df487f, type: 3}
+  - {fileID: 8924018468687458319, guid: f698126d3f9886943b92a000a6c6dca3, type: 3}
+  - {fileID: 8924018468687458319, guid: dfaeea3a61b188f47a8d4c6b9e153628, type: 3}
+  - {fileID: 8924018468687458319, guid: 03783333a22d94141a1189106b417a16, type: 3}
+  - {fileID: 8518727520577524337, guid: 2b1e50712873aae45952d042e4df487f, type: 3}
+  - {fileID: 8518727520577524337, guid: 0f6cea4f829b8984fb5d4e0855e567c7, type: 3}
+  - {fileID: 8518727520577524337, guid: 8b4a9c691bbe02a468b8cda1aa016dae, type: 3}
   maxNumberOfSpawns: 4
   xOffSet: -4
   yOffSet: -4
@@ -228,7 +235,7 @@ GameObject:
   - component: {fileID: 2003890947143912154}
   m_Layer: 10
   m_Name: Top Wall Left
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +372,7 @@ GameObject:
   - component: {fileID: 2757186906199455885}
   m_Layer: 10
   m_Name: Right Wall Up
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -472,7 +479,7 @@ GameObject:
   - component: {fileID: 4760633539740358214}
   m_Layer: 10
   m_Name: +
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -647,7 +654,7 @@ GameObject:
   - component: {fileID: 5103330184579163487}
   m_Layer: 10
   m_Name: Right Wall Bottom
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -728,7 +735,7 @@ GameObject:
   - component: {fileID: 5103330184726261471}
   m_Layer: 10
   m_Name: Top Wall Right
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -938,7 +945,7 @@ GameObject:
   - component: {fileID: 5103330184988323032}
   m_Layer: 10
   m_Name: Bottom Wall Right
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1122,7 +1129,7 @@ GameObject:
   - component: {fileID: 5103330185334156820}
   m_Layer: 10
   m_Name: SideWalls
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1423,7 +1430,7 @@ GameObject:
   - component: {fileID: 5103330185670605502}
   m_Layer: 10
   m_Name: Left Wall Bottom
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1697,7 +1704,7 @@ GameObject:
   - component: {fileID: 7131814499023207564}
   m_Layer: 10
   m_Name: Left Wall Up
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1804,7 +1811,7 @@ GameObject:
   - component: {fileID: 8517583754347237720}
   m_Layer: 10
   m_Name: Bottom Wall Left
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1940,7 +1947,7 @@ GameObject:
   - component: {fileID: 45460502149561438}
   m_Layer: 10
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

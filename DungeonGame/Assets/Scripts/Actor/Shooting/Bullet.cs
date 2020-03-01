@@ -16,18 +16,25 @@ public class Bullet : MonoBehaviour
         
         if (collision.tag != "Bullet" && collision.tag != "Rooms")
         {
+            if(collision.tag == "Walls")
+            {
+                ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.HitParticleSmall);
+            }
+            
             AudioSource.PlayClipAtPoint(explosionSound.clip, Camera.main.transform.position);
-            if (collision.tag == "Player")
+            if(collision.tag == "Enemy")
             {
                 collision.GetComponent<Health>().TakeDamage(damage);
+                ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.HitParticleSmall);
             }
-            else if(collision.tag == "Enemy")
-            {
-                collision.GetComponent<Health>().TakeDamage(damage);
-            }
-            gameObject.active = false;
+            gameObject.SetActive(false);
             Invoke("DestroyObject", 2f);
         }
+        
+    }
+
+    private void GetCollisionPosition(Collider2D collision)
+    {
         
     }
     private void DestroyObject()

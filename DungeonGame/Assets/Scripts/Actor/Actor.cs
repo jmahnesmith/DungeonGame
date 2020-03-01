@@ -7,6 +7,8 @@ public class Actor : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
 
+    
+
     protected void Aim(Vector3 target)
     {
         Vector2 dir = transform.position - target;
@@ -28,4 +30,6 @@ public class Actor : MonoBehaviour
     {
         return speed;
     }
+
+    
 }

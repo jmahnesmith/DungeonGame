@@ -6,6 +6,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int health = 100;
+    public AudioClip deathNoise;
     private int curHealth;
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        //ParticleManager.Instance.PlayParticle(this.gameObject.transform.position, ParticleManager.ParticleEnum.HitParticleSmall);
         curHealth = curHealth - damage;
         if (curHealth <= 0)
             Die();
@@ -29,6 +31,16 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        //Play Particle effect.
+        ParticleManager.Instance.PlayParticle(this.gameObject.transform.position, ParticleManager.ParticleEnum.ExplosionParticle1);
+        //Play Sound Effect.
+        AudioSource.PlayClipAtPoint(deathNoise, Camera.main.transform.position, 1f);
+        //Check if gameobject has parent 
+        if(transform.parent)
+        {
+            Destroy(transform.parent.gameObject);
+        }
+        else
         Destroy(this.gameObject);
     }
 }
