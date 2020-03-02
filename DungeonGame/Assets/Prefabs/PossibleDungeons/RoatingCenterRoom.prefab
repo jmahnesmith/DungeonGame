@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 1998565375955349289}
   - component: {fileID: 1998565375955349288}
   - component: {fileID: 1706231803966862637}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: RoatingCenterRoom
   m_TagString: Rooms
   m_Icon: {fileID: 0}
@@ -219,6 +219,7 @@ MonoBehaviour:
   - {fileID: 8518727520577524337, guid: 2b1e50712873aae45952d042e4df487f, type: 3}
   - {fileID: 8518727520577524337, guid: 0f6cea4f829b8984fb5d4e0855e567c7, type: 3}
   - {fileID: 8518727520577524337, guid: 8b4a9c691bbe02a468b8cda1aa016dae, type: 3}
+  - {fileID: 2838794582909597740, guid: a76ae3e6f90ec9840a221c3ed95ed7c6, type: 3}
   maxNumberOfSpawns: 4
   xOffSet: -4
   yOffSet: -4
@@ -511,7 +512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c61d335740dac7f4488648a0dbe00f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectThatWillRotate: {fileID: 2981452699940917232}
   strength: 1
 --- !u!61 &4760633539740358214
 BoxCollider2D:

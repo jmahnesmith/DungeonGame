@@ -17,6 +17,7 @@ public class Player : Actor
     public int dashDuration = 35;
     protected int dashC;
     public bool canDash;
+    public AudioClip CanDashSound;
 
     float colorDuration = 5;
     float smoothness = 0.02f;
@@ -35,7 +36,6 @@ public class Player : Actor
     {
         rb = GetComponent<Rigidbody2D>();
         cameraShake = FindObjectOfType<CameraShake>();
-        GetComponent<SpriteRenderer>().color = new Color32(255, 176, 52, 255);
     }
 
 
@@ -69,6 +69,7 @@ public class Player : Actor
             {
                 colorSignalDone = true;
                 StartCoroutine(OnCanDash(_firstColor, _secondColor, 1f));
+                
             }
             
         }
@@ -95,7 +96,7 @@ public class Player : Actor
         }
         rb.angularVelocity = 0f;
         dashing = true;
-        StartCoroutine(cameraShake.Shake(0.1f, 0.3f));
+        StartCoroutine(cameraShake.Shake(0.1f, 0.2f));
         dashDir = dir * pen;
         dashC = 0;
         dashCooldown = 100;
@@ -121,16 +122,18 @@ public class Player : Actor
             _changingColor = true;
             SpriteRenderer sprite = GetComponent<SpriteRenderer>();
             float counter = 0;
-            while(counter < duration)
+            AudioSource.PlayClipAtPoint(CanDashSound, Camera.main.transform.position, 0.4f);
+            while (counter < duration)
             {
                 counter += Time.deltaTime;
-
+                
                 sprite.color = Color32.Lerp(firstColor, secondColor, (counter / 2) / (duration / 2));
                 sprite.color = Color32.Lerp(secondColor, firstColor, (counter / 2) / (duration / 2));
 
                 yield return null;
             }
 
+            
             _changingColor = false;
                 
         }

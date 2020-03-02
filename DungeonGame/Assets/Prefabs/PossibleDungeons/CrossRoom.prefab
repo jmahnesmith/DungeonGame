@@ -254,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3443382986315351317}
   - component: {fileID: 3443382986315351318}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: RightDoorSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 3443382986537768068}
   - component: {fileID: 3443382986537768069}
   - component: {fileID: 4702706544918734768}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Left Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3443382986706420348}
   - component: {fileID: 3443382986706420349}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: TopDoorSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,7 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3443382986751179800}
   - component: {fileID: 3443382986751179801}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: BottomDoorSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3443382986907789109}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 3443382987066043220}
   - component: {fileID: 3443382987066043221}
   - component: {fileID: 4106402528810943422}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Top Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 3443382987225399857}
   - component: {fileID: 3443382987225399858}
   - component: {fileID: 5999461178431725562}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Bottom Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,7 +1060,7 @@ GameObject:
   - component: {fileID: 3443382988011955968}
   - component: {fileID: 3443382988011955969}
   - component: {fileID: 4230588849213625727}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Right Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1725,7 +1725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2286643706409453667}
   - component: {fileID: 2177478924628439666}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: LeftDoorSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1838,7 +1838,7 @@ GameObject:
   - component: {fileID: 8261754320328247888}
   - component: {fileID: 8261754320328247889}
   - component: {fileID: 9130539857291726932}
-  m_Layer: 11
+  m_Layer: 2
   m_Name: CrossRoom
   m_TagString: Rooms
   m_Icon: {fileID: 0}
@@ -1933,6 +1933,10 @@ MonoBehaviour:
   - {fileID: 8924018468687458319, guid: f698126d3f9886943b92a000a6c6dca3, type: 3}
   - {fileID: 8924018468687458319, guid: dfaeea3a61b188f47a8d4c6b9e153628, type: 3}
   - {fileID: 8924018468687458319, guid: 03783333a22d94141a1189106b417a16, type: 3}
+  - {fileID: 8518727520577524337, guid: 2b1e50712873aae45952d042e4df487f, type: 3}
+  - {fileID: 8518727520577524337, guid: 0f6cea4f829b8984fb5d4e0855e567c7, type: 3}
+  - {fileID: 8518727520577524337, guid: 8b4a9c691bbe02a468b8cda1aa016dae, type: 3}
+  - {fileID: 2838794582909597740, guid: a76ae3e6f90ec9840a221c3ed95ed7c6, type: 3}
   maxNumberOfSpawns: 4
   xOffSet: -4
   yOffSet: -4

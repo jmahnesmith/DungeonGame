@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5808316678568602393}
   - component: {fileID: 5808316678568602394}
   - component: {fileID: 5808316678568602395}
-  - component: {fileID: 5808316678568602396}
+  - component: {fileID: 9002872288380241752}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5808316678568602398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.3485913, y: 1.7144914, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children:
   - {fileID: 5808316679292299059}
   m_Father: {fileID: 0}
@@ -116,11 +116,11 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2468361553768818435, guid: 0e8e311c2386b924ea35950ebc0c8d9b,
     type: 3}
   cameraShake: {fileID: 0}
-  firingSound: {fileID: 8300000, guid: de028324ad0d85f469f975f100101916, type: 3}
+  firingSound: {fileID: 8300000, guid: 60b97136923b1434dbfaa5da730d9954, type: 3}
   bulletForce: 20
   fireRate: 0.5
   canShoot: 0
---- !u!61 &5808316678568602396
+--- !u!61 &9002872288380241752
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,14 +137,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.0625, y: 0.0625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.0625, y: 0.0625}
   m_EdgeRadius: 0
 --- !u!1 &5808316679292299060
 GameObject:
@@ -170,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5808316679292299060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0607, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0.076, z: 0}
   m_LocalScale: {x: 13, y: 13, z: 1}
   m_Children: []
   m_Father: {fileID: 5808316678568602392}
