@@ -26,7 +26,22 @@ public class Enemy : MonoBehaviour
 
     }
 
+    private void resetSpawn()
+    {
+        Vector2 currPosition = transform.position;
+        Instantiate(this.gameObject, currPosition + new Vector2(1, 0), Quaternion.identity);
+        Destroy(this);
+    }
 
-    
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Wall")
+        {
+            resetSpawn();
+        }
+    }
+
+
+
+
 }

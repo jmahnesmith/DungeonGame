@@ -11,16 +11,20 @@ public class Room : MonoBehaviour
     public int x;
     public int y;
 
+    public int minEnemySpawns;
+    public int maxEnemySpawns;
+
     [SerializeField]
     private bool enemyInRoom = false;
     [SerializeField]
-    private bool playerInRoom = false;
+    public bool playerInRoom = false;
     [SerializeField]
-    private bool doorsClosed = false;
+    public bool doorsClosed = false;
     [SerializeField]
     private bool updatedDoors = false;
     [SerializeField]
-    private bool roomDefeated = false;
+    public bool roomDefeated = false;
+    public bool canSpawnEnemy = true;
 
     public Room(int x, int y)
     {
@@ -35,6 +39,10 @@ public class Room : MonoBehaviour
     public Door bottomDoor;
 
     public List<Door> doors = new List<Door>();
+
+    //Events
+    public delegate void OnNextRoom(Room room);
+    public event OnNextRoom nextRoomDelegate;
 
     // Start is called before the first frame update
     void Start()
@@ -190,34 +198,29 @@ public class Room : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-
-        if(collision.tag == "Player")
-        {
-            RoomController.instance.OnPlayerEnterRoom(this);
-
-            //Flag that player is in room.
-            playerInRoom = true;
-
-            //SpawnEnemies
-            if (enemySpawner != null && playerInRoom)
-            {
-                Invoke("SpawnEnemies", 0.2f);
-            }
-                
-        }
 
         //Close / Open Doors
         if (collision.tag == "Enemy")
         {
             enemyInRoom = true;
         }
+
+
+        if (collision.tag == "Player")
+        {
+            //RoomController.instance.OnPlayerEnterRoom(this);
+            playerInRoom = true;
+            RoomController.instance.currRoom = this;
+            Debug.Log(this.name);
+
+            //Flag that player is in room.
+            
+                
+        }
+
+        
     }
-    private void SpawnEnemies()
-    {
-        if(roomDefeated == false)
-        enemySpawner.SpawnEnemies(this);
-    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")

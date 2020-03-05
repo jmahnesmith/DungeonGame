@@ -6,7 +6,6 @@ public class EnemySpawner : MonoBehaviour
 {
 
     public GameObject[] enemies;
-    public int maxNumberOfSpawns = 4;
     public float xOffSet;
     public float yOffSet;
 
@@ -15,19 +14,30 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        numberOfEnemies = (int)Random.Range(1f, maxNumberOfSpawns);
+        
+        RoomController.instance.nextRoomDelegate += SpawnEnemies;
         
     }
-    public void SpawnEnemies(Room room)
+
+    private void SpawnEnemies(Room room)
     {
-        for (int i = 0; i < numberOfEnemies; i++)
+        numberOfEnemies = Random.Range(room.minEnemySpawns, room.maxEnemySpawns);
+
+        if (!room.roomDefeated && room.playerInRoom)
         {
-            Vector2 randomPos = GetRandomPosition(room);
-            indexOfRandomEnemy = Random.Range(0, enemies.Length);
-            Instantiate(enemies[indexOfRandomEnemy], randomPos, Quaternion.identity);
+            for (int i = 0; i < numberOfEnemies; i++)
+            {
+                Vector2 randomPos = GetRandomPosition(room);
+                indexOfRandomEnemy = Random.Range(0, enemies.Length);
+                GameObject enemy = Instantiate(enemies[indexOfRandomEnemy], randomPos, Quaternion.identity);
+            }
+            Debug.Log("Spawning Enemies at " + room.name);
+            
         }
-        Debug.Log("Spawning Enemies at " + room.name);
+
+        
     }
+
 
     private Vector2 GetRandomPosition(Room room)
     {

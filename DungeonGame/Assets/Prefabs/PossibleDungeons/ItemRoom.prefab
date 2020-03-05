@@ -161,11 +161,14 @@ MonoBehaviour:
   height: 20
   x: 0
   y: 0
+  minEnemySpawns: 0
+  maxEnemySpawns: 0
   enemyInRoom: 0
   playerInRoom: 0
   doorsClosed: 0
   updatedDoors: 0
   roomDefeated: 0
+  canSpawnEnemy: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}

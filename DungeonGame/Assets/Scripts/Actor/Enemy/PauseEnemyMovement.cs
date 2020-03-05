@@ -7,7 +7,7 @@ public class PauseEnemyMovement : MonoBehaviour
 {
     void Start()
     {
-        FindObjectOfType<CameraController>().nextRoomDelegate += StartMovement;
+        RoomController.instance.nextRoomDelegate += StartMovement;
         Debug.Log("PauseEnemyMovemnt is now subscribed to nextRoomDelegate");
         if (GetComponent<AIPath>() != null)
         {
@@ -15,12 +15,12 @@ public class PauseEnemyMovement : MonoBehaviour
         }
     }
 
-    private void StartMovement()
+    private void StartMovement(Room room)
     {
         if (GetComponent<AIPath>() != null)
         {
             GetComponent<AIPath>().canMove = true;
         }
-        FindObjectOfType<CameraController>().nextRoomDelegate -= StartMovement;
+        RoomController.instance.nextRoomDelegate -= StartMovement;
     }
 }

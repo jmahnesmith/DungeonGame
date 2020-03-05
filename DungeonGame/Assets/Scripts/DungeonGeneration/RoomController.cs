@@ -26,7 +26,37 @@ public class RoomController : MonoBehaviour
 
     RoomInfo currentLoadRoomData;
 
-    Room currRoom;
+    [SerializeField]
+    private Room _currRoom;
+    public Room currRoom
+
+    {
+        get { return _currRoom; }
+        set
+        {
+            if (_currRoom != value)
+            {
+                
+                Debug.Log("New Room " + value.name);
+                _currRoom = value;
+                if (nextRoomDelegate != null)
+                {
+                    nextRoomDelegate(value);
+                    Debug.Log("OnNextRoom Triggered");
+                }
+                else
+                {
+                    Debug.Log("There are no nextRoomDelegate Subscribers");
+                }
+
+            }
+        }
+    }
+
+    //Events
+    public delegate void OnNextRoom(Room room);
+    public event OnNextRoom nextRoomDelegate;
+    //
 
     Queue<RoomInfo> loadRoomQueue = new Queue<RoomInfo>();
 
@@ -164,13 +194,6 @@ public class RoomController : MonoBehaviour
     public bool DoesRoomExist(int x, int y)
     {
         return loadedRooms.Find(item => item.x == x && item.y == y);
-    }
-
-    public void OnPlayerEnterRoom(Room room)
-    {
-        CameraController.instance.currRoom = room;
-        currRoom = room;
-
     }
     private Room FindHighestYRoom()
     {
