@@ -6,14 +6,35 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public static CameraController instance;
+    private Room _currRoom;
+    public Room currRoom
 
-    public Room currRoom;
+    {
+        get { return _currRoom; }
+        set
+        {
+            if(_currRoom != value)
+            {
+                if (nextRoomDelegate != null)
+                {
+                    nextRoomDelegate();
+                    Debug.Log("OnNextRoom Triggered");
+                }
+                Debug.Log("New Room " + value.name);
+                _currRoom = value;
+                
+            }
+        }
+    }
 
     public float moveSpeedWhenRoomChanged;
 
     public float xOffset;
 
     public float yOffset;
+
+    public delegate void OnNextRoom();
+    public event OnNextRoom nextRoomDelegate;
 
     private void Awake()
     {
@@ -29,6 +50,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         UpdatePosition();
+        
     }
 
     private void UpdatePosition()

@@ -13,8 +13,7 @@ public class Enemy : MonoBehaviour
     {
 
         StartCoroutine(SpawnEffect());
-        if(GetComponent<AIPath>())
-        GetComponent<AIPath>().isStopped = true;
+        
 
     }
 
@@ -24,8 +23,6 @@ public class Enemy : MonoBehaviour
         ParticleSystem particles = GetComponentInChildren<ParticleSystem>();
         particles.Play();
         yield return new WaitForSeconds(1);
-        if(GetComponent<AIPath>())
-        GetComponent<AIPath>().isStopped = false;
 
     }
 

@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 4986929795831721212}
   - component: {fileID: 6505268001797335343}
   - component: {fileID: 6504255068662070752}
+  - component: {fileID: 6949493423248700985}
   m_Layer: 0
   m_Name: Center
   m_TagString: Enemy
@@ -593,6 +594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathNoise: {fileID: 8300000, guid: 9a74432d288200846aeeeaee34ed7c23, type: 3}
+  invincibleTime: 0
 --- !u!114 &6504255068662070752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,6 +616,18 @@ MonoBehaviour:
   bulletForce: 10
   shootTimer: 2.5
   shootFoward: 1
+--- !u!114 &6949493423248700985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8924018469112762191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b524beacc6f694dbd50343b54c7af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8924018469501462531
 GameObject:
   m_ObjectHideFlags: 0

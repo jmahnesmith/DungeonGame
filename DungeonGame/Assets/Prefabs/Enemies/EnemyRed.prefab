@@ -4776,7 +4776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4433558200078529969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0533, z: 0}
+  m_LocalPosition: {x: 0, y: 0.059, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5579289225014820265}
@@ -4802,6 +4802,7 @@ GameObject:
   - component: {fileID: 6865775659233520001}
   - component: {fileID: 3107210559873318018}
   - component: {fileID: 2293848829200954147}
+  - component: {fileID: 7183953455891053978}
   m_Layer: 9
   m_Name: EnemyRed
   m_TagString: Enemy
@@ -4948,6 +4949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 150
   deathNoise: {fileID: 8300000, guid: 9a74432d288200846aeeeaee34ed7c23, type: 3}
+  invincibleTime: 0
 --- !u!114 &-6509086233304062339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5069,3 +5071,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 5
+--- !u!114 &7183953455891053978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518727520577524337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b524beacc6f694dbd50343b54c7af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
