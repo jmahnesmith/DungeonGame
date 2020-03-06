@@ -209,8 +209,6 @@ D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Boo.Lang.PatternMatchin
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Boo.Lang.Parser.dll
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Boo.Lang.Useful.dll
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Unity.CecilTools.dll
-D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\AstarPathfindingProject.pdb
-D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\PackageToolsEditor.pdb
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\nunit.framework.xml
 D:\Projects\Unity\DungeonGame\DungeonGame\obj\Debug\AstarPathfindingProjectEditor.csprojAssemblyReference.cache
 D:\Projects\Unity\DungeonGame\DungeonGame\obj\Debug\AstarPathfindingProjectEditor.csproj.CoreCompileInputs.cache
@@ -219,3 +217,5 @@ D:\Projects\Unity\DungeonGame\DungeonGame\obj\Debug\AstarPathfindingProjectEdito
 D:\Projects\Unity\DungeonGame\DungeonGame\obj\Debug\AstarPathfindingProjectEditor.pdb
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Pathfinding.ClipperLib.dll
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Pathfinding.Poly2Tri.dll
+D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\AstarPathfindingProject.pdb
+D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\PackageToolsEditor.pdb

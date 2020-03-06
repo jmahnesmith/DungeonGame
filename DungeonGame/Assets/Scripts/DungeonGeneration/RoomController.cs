@@ -16,9 +16,28 @@ public class RoomInfo
 
 public class RoomController : MonoBehaviour
 {
-    public static RoomController instance;
 
-    public List<PossibleRoom> possibleRooms = new List<PossibleRoom>();
+    #region Singleton
+    private static RoomController _instance;
+
+    public static RoomController instance { get { return _instance; } }
+
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+
+#endregion
+
+    public List<PossibleRoom> possibleRooms;
 
     private EnemySpawner enemyController;
 
@@ -66,11 +85,6 @@ public class RoomController : MonoBehaviour
     bool spawnedBoosRoom = false;
     bool updatedRoom = false;
 
-    private void Awake()
-    {
-        instance = this;
-        enemyController = GetComponent<EnemySpawner>();
-    }
 
     private void Update()
     {

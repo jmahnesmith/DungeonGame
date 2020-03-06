@@ -15,14 +15,11 @@ public class DungeonGenerator : MonoBehaviour
     //Event
     public event Action GenerationCompleteEvent;
 
-    private void Awake()
-    {
-        dungeonRooms = DungeonCrawlerController.GenerateDungeon(dungeonGenerationData);
-        SpawnRooms(dungeonRooms);
-    }
 
     private void Start()
     {
+        dungeonRooms = DungeonCrawlerController.GenerateDungeon(dungeonGenerationData);
+        SpawnRooms(dungeonRooms);
 
         StartCoroutine(GenerationCompleteCoroutene());
         Debug.Log("GenerationCompleteEvent");
