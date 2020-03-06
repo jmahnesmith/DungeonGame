@@ -5,22 +5,23 @@ using UnityEngine;
 
 public class PauseEnemyMovement : MonoBehaviour
 {
+    public float duration = 1f;
     void Start()
     {
-        RoomController.instance.nextRoomDelegate += StartMovement;
-        Debug.Log("PauseEnemyMovemnt is now subscribed to nextRoomDelegate");
         if (GetComponent<AIPath>() != null)
         {
             GetComponent<AIPath>().canMove = false;
         }
+        StartCoroutine(StartMovement());
     }
 
-    private void StartMovement(Room room)
+    private IEnumerator StartMovement()
     {
+        yield return new WaitForSeconds(duration);
         if (GetComponent<AIPath>() != null)
         {
             GetComponent<AIPath>().canMove = true;
         }
-        RoomController.instance.nextRoomDelegate -= StartMovement;
+        
     }
 }

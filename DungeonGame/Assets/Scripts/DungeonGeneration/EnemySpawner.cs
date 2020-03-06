@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
     {
         numberOfEnemies = Random.Range(room.minEnemySpawns, room.maxEnemySpawns);
 
-        if (!room.roomDefeated && room.playerInRoom)
+        if (!room.roomDefeated && room.playerInRoom && room.canSpawnEnemy)
         {
             for (int i = 0; i < numberOfEnemies; i++)
             {

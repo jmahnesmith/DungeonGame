@@ -12,10 +12,19 @@ public class Health : MonoBehaviour
     private bool invincible = false;
 
 
+    float colorDuration = 0.5f;
+    bool _changingColor = false;
+    Color32 _firstColor;
+    Color32 _secondColor = new Color32(255, 255, 255, 255);
+    private SpriteRenderer _sprite;
+
+
     // Start is called before the first frame update
     void Start()
     {
         curHealth = health;
+        _firstColor = GetComponent<SpriteRenderer>().color;
+        _sprite = gameObject.GetComponent<SpriteRenderer>();
     }
 
 
@@ -23,6 +32,7 @@ public class Health : MonoBehaviour
     {
         if(!invincible)
         {
+            StartCoroutine(Flash(_sprite, _firstColor, _secondColor, colorDuration));
             curHealth = curHealth - damage;
             invincible = true;
             StartCoroutine(ToggleInvincible());
@@ -52,5 +62,23 @@ public class Health : MonoBehaviour
         }
         else
         Destroy(this.gameObject);
+    }
+
+    private IEnumerator Flash(SpriteRenderer sprite, Color32 firstColor, Color32 secondColor, float duration)
+    {
+        _changingColor = true;
+        float counter = 0;
+        while (counter < duration)
+        {
+            counter += Time.deltaTime;
+
+            sprite.color = Color32.Lerp(firstColor, secondColor, (counter / 2) / (duration / 2));
+            sprite.color = Color32.Lerp(secondColor, firstColor, (counter / 2) / (duration / 2));
+
+            yield return null;
+        }
+
+
+        _changingColor = false;
     }
 }
