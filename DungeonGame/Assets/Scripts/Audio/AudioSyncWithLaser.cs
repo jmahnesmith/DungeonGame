@@ -11,7 +11,7 @@ public class AudioSyncWithLaser : AudioSyncer
     private IEnumerator MoveToIntensity(int intencity)
     {
 
-        float _curr = line.GetPosition(1).x;
+        float _curr = maxLineIntensity;
         float _originalValue = _curr;
         float _timer = 0;
 
@@ -59,5 +59,6 @@ public class AudioSyncWithLaser : AudioSyncer
     private void Start()
     {
         line = GetComponent<LineRenderer>();
+        line.SetPosition(1, new Vector3(minLineIntensity, 0, 0));
     }
 }

@@ -15,15 +15,15 @@ public class LaserShoot : MonoBehaviour
     }
     void Update()
     {
-        Vector3 endPosition = transform.position + (transform.up * laserBeamLength);
+        Vector3 endPosition = transform.position + (transform.right * laserBeamLength);
         Vector2 laserDirection = transform.right;
         RaycastHit2D hit = Physics2D.Raycast(this.transform.position, laserDirection, laserBeamLength);
-        
+
         if (hit)
         {
             Debug.Log(hit.transform.name);
-            if(hit.collider.tag == "Player")
-            hit.transform.GetComponent<Health>().TakeDamage(25);
+            if (hit.collider.tag == "Player")
+                hit.transform.GetComponent<Health>().TakeDamage(25);
 
             line.SetPosition(0, transform.position);
             line.SetPosition(1, hit.point);
@@ -31,9 +31,9 @@ public class LaserShoot : MonoBehaviour
         else
         {
             line.SetPosition(0, transform.position);
-            line.SetPosition(1, transform.position + transform.right * laserBeamLength );
+            line.SetPosition(1, transform.position + transform.right * laserBeamLength);
         }
-        
+
         //line.SetPositions(new Vector3[] { transform.position, endPosition });
     }
     /*IEnumerator FireLaser()

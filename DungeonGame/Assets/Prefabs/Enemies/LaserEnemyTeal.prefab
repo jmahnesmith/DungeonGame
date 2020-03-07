@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756354829}
-  - component: {fileID: 756354831}
   - component: {fileID: 3639674836656929837}
+  - component: {fileID: 5428667969121614797}
   m_Layer: 0
   m_Name: Firepoint (2)
   m_TagString: Untagged
@@ -32,19 +32,6 @@ Transform:
   m_Father: {fileID: 2031238705356937204}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
---- !u!114 &756354831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756354828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e42516ada94e16489c345983c6b7eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserBeamLength: 10
 --- !u!120 &3639674836656929837
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -84,7 +71,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0.2, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -92,8 +79,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.096084595
+        time: 0.014926513
+        value: 0.18380937
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -138,8 +125,26 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &5428667969121614797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756354828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309484425813e9a4990c1c839faf1a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 15
+  timeStep: 1
+  timeToBeat: 1
+  restSmoothTime: 4
+  maxLineIntensity: 0.4
+  minLineIntensity: 0.2
 --- !u!1 &861733830
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,8 +154,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 861733831}
-  - component: {fileID: 861733833}
   - component: {fileID: 3816966631237957516}
+  - component: {fileID: 2779145262470381735}
   m_Layer: 0
   m_Name: Firepoint (3)
   m_TagString: Untagged
@@ -172,19 +177,6 @@ Transform:
   m_Father: {fileID: 2031238705356937204}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 150}
---- !u!114 &861733833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 861733830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e42516ada94e16489c345983c6b7eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserBeamLength: 10
 --- !u!120 &3816966631237957516
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -224,7 +216,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0.2, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -232,8 +224,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.096084595
+        time: 0.014926513
+        value: 0.18380937
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -278,8 +270,26 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &2779145262470381735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861733830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309484425813e9a4990c1c839faf1a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 15
+  timeStep: 1
+  timeToBeat: 1
+  restSmoothTime: 4
+  maxLineIntensity: 0.4
+  minLineIntensity: 0.2
 --- !u!1 &1319120093
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,8 +299,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319120094}
-  - component: {fileID: 1319120096}
   - component: {fileID: 2960848270821848715}
+  - component: {fileID: 4318407192006906453}
   m_Layer: 0
   m_Name: Firepoint (4)
   m_TagString: Untagged
@@ -312,19 +322,6 @@ Transform:
   m_Father: {fileID: 2031238705356937204}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1319120096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1319120093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e42516ada94e16489c345983c6b7eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserBeamLength: 10
 --- !u!120 &2960848270821848715
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -364,7 +361,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0.2, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -372,8 +369,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.096084595
+        time: 0.014926513
+        value: 0.18380937
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -418,8 +415,26 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &4318407192006906453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319120093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309484425813e9a4990c1c839faf1a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 15
+  timeStep: 1
+  timeToBeat: 1
+  restSmoothTime: 4
+  maxLineIntensity: 0.4
+  minLineIntensity: 0.2
 --- !u!1 &1340458523
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,8 +444,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1340458524}
-  - component: {fileID: 1340458526}
   - component: {fileID: 3732893194274529390}
+  - component: {fileID: 3724300899779696502}
   m_Layer: 0
   m_Name: Firepoint (1)
   m_TagString: Untagged
@@ -452,19 +467,6 @@ Transform:
   m_Father: {fileID: 2031238705356937204}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -150}
---- !u!114 &1340458526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340458523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e42516ada94e16489c345983c6b7eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserBeamLength: 10
 --- !u!120 &3732893194274529390
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -504,7 +506,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0.2, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -512,8 +514,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.096084595
+        time: 0.014926513
+        value: 0.18380937
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -558,8 +560,26 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &3724300899779696502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340458523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309484425813e9a4990c1c839faf1a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 15
+  timeStep: 1
+  timeToBeat: 1
+  restSmoothTime: 4
+  maxLineIntensity: 0.4
+  minLineIntensity: 0.2
 --- !u!1 &2838794582909597740
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b524beacc6f694dbd50343b54c7af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 1
 --- !u!1 &6383239620758030164
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,8 +786,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7936339665538660225}
-  - component: {fileID: 7183556479194346571}
   - component: {fileID: 3770448482579349983}
+  - component: {fileID: 4153567293691548697}
   m_Layer: 0
   m_Name: Firepoint (5)
   m_TagString: Untagged
@@ -788,19 +809,6 @@ Transform:
   m_Father: {fileID: 2031238705356937204}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &7183556479194346571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6383239620758030164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e42516ada94e16489c345983c6b7eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserBeamLength: 10
 --- !u!120 &3770448482579349983
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -840,7 +848,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0.2, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -848,8 +856,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.096084595
+        time: 0.014926513
+        value: 0.18380937
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -894,8 +902,26 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &4153567293691548697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383239620758030164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309484425813e9a4990c1c839faf1a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 15
+  timeStep: 1
+  timeToBeat: 1
+  restSmoothTime: 4
+  maxLineIntensity: 0.4
+  minLineIntensity: 0.2
 --- !u!1 &7843824260040384492
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,8 +931,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8879677688176881260}
-  - component: {fileID: 7549728578453963760}
   - component: {fileID: 6741399291093911424}
+  - component: {fileID: 1643460131821545726}
   m_Layer: 0
   m_Name: Firepoint
   m_TagString: Untagged
@@ -928,19 +954,6 @@ Transform:
   m_Father: {fileID: 2031238705356937204}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
---- !u!114 &7549728578453963760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7843824260040384492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e42516ada94e16489c345983c6b7eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laserBeamLength: 10
 --- !u!120 &6741399291093911424
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -980,7 +993,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0.2, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -988,8 +1001,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 0.096084595
+        time: 0.014926513
+        value: 0.18380937
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1034,8 +1047,26 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
+--- !u!114 &1643460131821545726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843824260040384492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309484425813e9a4990c1c839faf1a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bias: 15
+  timeStep: 1
+  timeToBeat: 1
+  restSmoothTime: 4
+  maxLineIntensity: 0.4
+  minLineIntensity: 0.2
 --- !u!1 &8492813990590600957
 GameObject:
   m_ObjectHideFlags: 0
