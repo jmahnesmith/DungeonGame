@@ -2,27 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioSyncWithLaser : AudioSyncer
+public class AudioSyncWithLaser : MonoBehaviour
 {
     public float maxLineIntensity;
     public float minLineIntensity;
 
     private LineRenderer line;
+    private BeatEvent beat;
     private IEnumerator MoveToIntensity(int intencity)
     {
 
-        float _curr = line.GetPosition(1).x;
+        float _curr = maxLineIntensity;
         float _originalValue = _curr;
         float _timer = 0;
 
         while (_curr != intencity)
         {
-            _curr = Mathf.Lerp(_curr, intencity, _timer / timeToBeat);
+            _curr = Mathf.Lerp(_curr, intencity, _timer / (beat.noteLength * 2));
             _timer += Time.deltaTime;
 
             ChangeLaserHeight(_curr);
 
-            _curr = Mathf.Lerp(_curr, _originalValue, _timer / timeToBeat);
+            _curr = Mathf.Lerp(_curr, _originalValue, _timer / (beat.noteLength * 2));
             _timer += Time.deltaTime;
 
             ChangeLaserHeight(_curr);
@@ -30,25 +31,6 @@ public class AudioSyncWithLaser : AudioSyncer
             yield return null;
         }
 
-        m_isBeat = false;
-    }
-
-
-    public override void OnUpdate()
-    {
-        base.OnUpdate();
-
-        if (m_isBeat) return;
-
-        ChangeLaserHeight(Mathf.Lerp(minLineIntensity, maxLineIntensity, restSmoothTime * Time.deltaTime));
-    }
-
-    public override void OnBeat()
-    {
-        base.OnBeat();
-
-        StopCoroutine("MoveToIntensity");
-        StartCoroutine("MoveToIntensity", maxLineIntensity);
     }
 
     void ChangeLaserHeight(float val)
@@ -59,5 +41,18 @@ public class AudioSyncWithLaser : AudioSyncer
     private void Start()
     {
         line = GetComponent<LineRenderer>();
+        line.SetPosition(1, new Vector3(minLineIntensity, 0, 0));
+        beat = FindObjectOfType<BeatEvent>();
+        beat.OnBeat += OnBeat;
+    }
+
+    private void OnBeat()
+    {
+        StopCoroutine("MoveToIntensity");
+        StartCoroutine("MoveToIntensity", maxLineIntensity);
+    }
+    private void OnDestroy()
+    {
+        beat.OnBeat -= OnBeat;
     }
 }
