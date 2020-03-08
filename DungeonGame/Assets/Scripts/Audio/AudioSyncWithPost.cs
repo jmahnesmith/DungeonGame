@@ -47,14 +47,6 @@ public class AudioSyncWithPost : AudioSyncer
         postProcessProfile.GetSetting<Bloom>().intensity.value = Mathf.Lerp(10f, 15f, restSmoothTime * Time.deltaTime);
     }
 
-    public override void OnBeat()
-    {
-        base.OnBeat();
-
-        StopCoroutine("MoveToIntensity");
-        StartCoroutine("MoveToIntensity", maxBloomIntensity);
-    }
-
     void ChangeBloom(float val)
     {
         postProcessProfile.GetSetting<Bloom>().intensity.value = val;
@@ -73,7 +65,14 @@ public class AudioSyncWithPost : AudioSyncer
 
     private void Start()
     {
+        FindObjectOfType<BeatEvent>().OnBeat += OnBeat;
+        Debug.Log("Subscribed to on beat from post.");
     }
 
-    
+    private void OnBeat()
+    {
+        base.OnBeat();
+        StopCoroutine("MoveToIntensity");
+        StartCoroutine("MoveToIntensity", maxBloomIntensity);
+    }
 }

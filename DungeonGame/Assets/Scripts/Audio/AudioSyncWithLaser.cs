@@ -43,14 +43,6 @@ public class AudioSyncWithLaser : AudioSyncer
         ChangeLaserHeight(Mathf.Lerp(minLineIntensity, maxLineIntensity, restSmoothTime * Time.deltaTime));
     }
 
-    public override void OnBeat()
-    {
-        base.OnBeat();
-
-        StopCoroutine("MoveToIntensity");
-        StartCoroutine("MoveToIntensity", maxLineIntensity);
-    }
-
     void ChangeLaserHeight(float val)
     {
         line.SetPosition(1, new Vector3(val, 0, 0));
@@ -60,5 +52,12 @@ public class AudioSyncWithLaser : AudioSyncer
     {
         line = GetComponent<LineRenderer>();
         line.SetPosition(1, new Vector3(minLineIntensity, 0, 0));
+        FindObjectOfType<BeatEvent>().OnBeat += OnBeat;
+    }
+
+    private void OnBeat()
+    {
+        StopCoroutine("MoveToIntensity");
+        StartCoroutine("MoveToIntensity", maxLineIntensity);
     }
 }
