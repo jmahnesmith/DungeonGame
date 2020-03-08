@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.PostProcessing;
 
-public class AudioSyncWithPost : AudioSyncer
+public class AudioSyncWithPost :MonoBehaviour
 {
     public float maxBloomIntensity;
     public float minBloomIntensity;
@@ -12,11 +12,13 @@ public class AudioSyncWithPost : AudioSyncer
     private float bloomIntensity;
     private int m_randomIndx;
     public PostProcessProfile postProcessProfile;
+    public float originalBloomValue;
     private BeatEvent beat;
     private IEnumerator MoveToIntensity(int intencity)
     {
         
         float _curr = postProcessProfile.GetSetting<Bloom>().intensity.value;
+        
         float _originalValue = _curr;
         float _timer = 0;
 
@@ -35,18 +37,8 @@ public class AudioSyncWithPost : AudioSyncer
             yield return null;
         }
 
-        m_isBeat = false;
     }
 
-
-    public override void OnUpdate()
-    {
-        base.OnUpdate();
-
-        if (m_isBeat) return;
-
-        postProcessProfile.GetSetting<Bloom>().intensity.value = Mathf.Lerp(10f, 15f, restSmoothTime * Time.deltaTime);
-    }
 
     void ChangeBloom(float val)
     {
@@ -69,11 +61,11 @@ public class AudioSyncWithPost : AudioSyncer
         beat = FindObjectOfType<BeatEvent>();
         beat.OnBeat += OnBeat;
         Debug.Log("Subscribed to on beat from post.");
+        originalBloomValue = postProcessProfile.GetSetting<Bloom>().intensity.value;
     }
 
     private void OnBeat()
     {
-        base.OnBeat();
         StopCoroutine("MoveToIntensity");
         StartCoroutine("MoveToIntensity", maxBloomIntensity);
     }
@@ -81,5 +73,10 @@ public class AudioSyncWithPost : AudioSyncer
     private void OnDestroy()
     {
         beat.OnBeat -= OnBeat;
+    }
+    private void OnApplicationQuit()
+    {
+        //Reset intensity to beginning value.
+        ChangeBloom(10);
     }
 }

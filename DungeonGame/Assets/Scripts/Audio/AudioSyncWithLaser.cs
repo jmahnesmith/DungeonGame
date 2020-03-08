@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioSyncWithLaser : AudioSyncer
+public class AudioSyncWithLaser : MonoBehaviour
 {
     public float maxLineIntensity;
     public float minLineIntensity;
@@ -31,17 +31,6 @@ public class AudioSyncWithLaser : AudioSyncer
             yield return null;
         }
 
-        m_isBeat = false;
-    }
-
-
-    public override void OnUpdate()
-    {
-        base.OnUpdate();
-
-        if (m_isBeat) return;
-
-        ChangeLaserHeight(Mathf.Lerp(minLineIntensity, maxLineIntensity, restSmoothTime * Time.deltaTime));
     }
 
     void ChangeLaserHeight(float val)

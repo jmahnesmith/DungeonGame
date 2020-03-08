@@ -601,13 +601,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1dcb42dca1344d45ad0224d96234c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bias: 15
-  timeStep: 0.67
-  timeToBeat: 1
-  restSmoothTime: 4
   maxBloomIntensity: 27
-  minBloomIntensity: 10
+  minBloomIntensity: 15
   postProcessProfile: {fileID: 11400000, guid: f46ca3be3cf5f234f9b33218eb9e29a4, type: 2}
+  originalBloomValue: 0
 --- !u!1 &1146060466
 GameObject:
   m_ObjectHideFlags: 0
