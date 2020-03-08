@@ -22,7 +22,8 @@ public class BPM : MonoBehaviour
     #endregion
     #region Parameters
     [SerializeField]
-    private double noteLength;
+    public static float noteLength;
+    public static int bpmAmount;
     #endregion
     public struct BpmMatchData
     {
@@ -74,6 +75,8 @@ public class BPM : MonoBehaviour
             strBuilder.Append("bpm : " + bpmMatchDatas[i].bpm + ", match : " + Mathf.FloorToInt(bpmMatchDatas[i].match * 10000f) + "\n");
         }
         Debug.Log(strBuilder.ToString());
+
+        bpmAmount = bpm;
 
         return bpm;
     }
@@ -170,6 +173,7 @@ public class BPM : MonoBehaviour
     }
     public static float CalculateBeatLength(int BeatsPerMinute)
     {
+        noteLength = 60f / bpmAmount;
         return 60f / BeatsPerMinute;
     }
 }

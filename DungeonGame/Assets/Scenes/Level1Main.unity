@@ -605,7 +605,7 @@ MonoBehaviour:
   timeStep: 0.67
   timeToBeat: 1
   restSmoothTime: 4
-  maxBloomIntensity: 17
+  maxBloomIntensity: 27
   minBloomIntensity: 10
   postProcessProfile: {fileID: 11400000, guid: f46ca3be3cf5f234f9b33218eb9e29a4, type: 2}
 --- !u!1 &1146060466
@@ -996,8 +996,8 @@ MonoBehaviour:
   - {fileID: 8518727520577524337, guid: 2b1e50712873aae45952d042e4df487f, type: 3}
   - {fileID: 8518727520577524337, guid: 0f6cea4f829b8984fb5d4e0855e567c7, type: 3}
   - {fileID: 8518727520577524337, guid: 8b4a9c691bbe02a468b8cda1aa016dae, type: 3}
-  xOffSet: 4
-  yOffSet: 4
+  xOffSet: -4
+  yOffSet: -4
 --- !u!1001 &1128872802261573293
 PrefabInstance:
   m_ObjectHideFlags: 0

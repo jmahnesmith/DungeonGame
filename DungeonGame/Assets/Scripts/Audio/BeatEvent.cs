@@ -10,7 +10,11 @@ public class BeatEvent : MonoBehaviour
     public AudioClip clip;
     public int bpm;
     public int bpmBias;
-    private float noteLength;
+    public float noteLength
+    {
+        get;
+        private set;
+    }
 
     private void Start()
     {
@@ -23,4 +27,6 @@ public class BeatEvent : MonoBehaviour
         if(OnBeat != null)
         OnBeat();
     }
+
+
 }

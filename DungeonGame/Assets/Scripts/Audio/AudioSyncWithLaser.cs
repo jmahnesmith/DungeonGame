@@ -8,6 +8,7 @@ public class AudioSyncWithLaser : AudioSyncer
     public float minLineIntensity;
 
     private LineRenderer line;
+    private BeatEvent beat;
     private IEnumerator MoveToIntensity(int intencity)
     {
 
@@ -17,12 +18,12 @@ public class AudioSyncWithLaser : AudioSyncer
 
         while (_curr != intencity)
         {
-            _curr = Mathf.Lerp(_curr, intencity, _timer / timeToBeat);
+            _curr = Mathf.Lerp(_curr, intencity, _timer / (beat.noteLength * 2));
             _timer += Time.deltaTime;
 
             ChangeLaserHeight(_curr);
 
-            _curr = Mathf.Lerp(_curr, _originalValue, _timer / timeToBeat);
+            _curr = Mathf.Lerp(_curr, _originalValue, _timer / (beat.noteLength * 2));
             _timer += Time.deltaTime;
 
             ChangeLaserHeight(_curr);
@@ -52,12 +53,17 @@ public class AudioSyncWithLaser : AudioSyncer
     {
         line = GetComponent<LineRenderer>();
         line.SetPosition(1, new Vector3(minLineIntensity, 0, 0));
-        FindObjectOfType<BeatEvent>().OnBeat += OnBeat;
+        beat = FindObjectOfType<BeatEvent>();
+        beat.OnBeat += OnBeat;
     }
 
     private void OnBeat()
     {
         StopCoroutine("MoveToIntensity");
         StartCoroutine("MoveToIntensity", maxLineIntensity);
+    }
+    private void OnDestroy()
+    {
+        beat.OnBeat -= OnBeat;
     }
 }

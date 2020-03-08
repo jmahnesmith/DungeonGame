@@ -12,6 +12,7 @@ public class AudioSyncWithPost : AudioSyncer
     private float bloomIntensity;
     private int m_randomIndx;
     public PostProcessProfile postProcessProfile;
+    private BeatEvent beat;
     private IEnumerator MoveToIntensity(int intencity)
     {
         
@@ -21,12 +22,12 @@ public class AudioSyncWithPost : AudioSyncer
 
         while (_curr != intencity)
         {
-            _curr = Mathf.Lerp(_curr, intencity, _timer / timeToBeat);
+            _curr = Mathf.Lerp(_curr, intencity, _timer / (beat.noteLength * 2));
             _timer += Time.deltaTime;
 
             ChangeBloom(_curr);
 
-            _curr = Mathf.Lerp(_curr, _originalValue, _timer / timeToBeat);
+            _curr = Mathf.Lerp(_curr, _originalValue, _timer / (beat.noteLength * 2));
             _timer += Time.deltaTime;
 
             ChangeBloom(_curr);
@@ -65,7 +66,8 @@ public class AudioSyncWithPost : AudioSyncer
 
     private void Start()
     {
-        FindObjectOfType<BeatEvent>().OnBeat += OnBeat;
+        beat = FindObjectOfType<BeatEvent>();
+        beat.OnBeat += OnBeat;
         Debug.Log("Subscribed to on beat from post.");
     }
 
@@ -74,5 +76,10 @@ public class AudioSyncWithPost : AudioSyncer
         base.OnBeat();
         StopCoroutine("MoveToIntensity");
         StartCoroutine("MoveToIntensity", maxBloomIntensity);
+    }
+
+    private void OnDestroy()
+    {
+        beat.OnBeat -= OnBeat;
     }
 }
