@@ -55,7 +55,39 @@ public class Player : Actor
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Dash(((Vector3)mousePos - transform.position).normalized);
+            if(canDash)
+            {
+                if (movement.x > 0)
+                {
+                    //Dash Right
+                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
+                    Dash(Vector2.right.normalized);
+
+                }
+                else if (movement.x < 0)
+                {
+                    //Dash Left
+                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
+                    Dash(Vector2.left.normalized);
+                }
+                else if (movement.y > 0)
+                {
+                    //Dash Up
+                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
+                    Dash(Vector2.up.normalized);
+                }
+                else if (movement.y < 0)
+                {
+                    //Dash back
+                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
+                    Dash(Vector2.down.normalized);
+                }
+                else
+                {
+                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
+                    Dash(((Vector3)mousePos - transform.position).normalized);
+                }
+            } 
         }
     }
 
@@ -76,6 +108,7 @@ public class Player : Actor
             
         if (dashing)
         {
+            canDash = false;
             rb.velocity = (dashDir * dashSpeed);
             dashC++;
             float r = transform.localRotation.eulerAngles.z;

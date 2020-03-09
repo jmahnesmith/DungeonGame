@@ -31,7 +31,8 @@ public class ParticleManager : MonoBehaviour
     {
         ExplosionParticle1,
         HitParticleSmall,
-        HitParticleMedium
+        HitParticleMedium,
+        DashParticle
 
     }
 
