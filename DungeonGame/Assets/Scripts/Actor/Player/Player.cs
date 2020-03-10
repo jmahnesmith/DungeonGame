@@ -22,7 +22,7 @@ public class Player : Actor
     float colorDuration = 5;
     float smoothness = 0.02f;
     bool _changingColor = false;
-    Color32 _firstColor = new Color32(255, 176, 52, 255);
+    Color32 _firstColor;
     Color32 _secondColor = new Color32(255, 255, 255, 255);
 
     private bool colorSignalDone = false;
@@ -36,6 +36,7 @@ public class Player : Actor
     {
         rb = GetComponent<Rigidbody2D>();
         cameraShake = FindObjectOfType<CameraShake>();
+        _firstColor = GetComponent<SpriteRenderer>().color;
     }
 
 
