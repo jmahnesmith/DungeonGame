@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public static CameraController instance;
+    /*public static CameraController instance;
     
 
     public float moveSpeedWhenRoomChanged;
@@ -14,16 +14,16 @@ public class CameraController : MonoBehaviour
 
     public float yOffset;
 
-    public Room currRoom;
+    //public Room currRoom;
 
     private void Awake()
     {
         instance = this;
     }
-    // Start is called before the first frame update
+   // Start is called before the first frame update
     void Start()
     {
-        RoomController.instance.nextRoomDelegate += UpdateCameraLocation;
+        //RoomController.instance.nextRoomDelegate += UpdateCameraLocation;
         Debug.Log("CameraController is now subsribed.");
     }
 
@@ -32,6 +32,7 @@ public class CameraController : MonoBehaviour
         currRoom = room;
         UpdatePosition();
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -69,4 +70,5 @@ public class CameraController : MonoBehaviour
     {
         return transform.position.Equals(GetCameraTargetPosition()) == false;
     }
+    */
 }

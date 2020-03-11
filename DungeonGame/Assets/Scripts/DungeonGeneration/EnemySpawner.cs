@@ -15,11 +15,11 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         
-        RoomController.instance.nextRoomDelegate += SpawnEnemies;
+        //RoomController.instance.nextRoomDelegate += SpawnEnemies;
         
     }
 
-    private void SpawnEnemies(Room room)
+    /*private void SpawnEnemies(Room room)
     {
         numberOfEnemies = Random.Range(room.minEnemySpawns, room.maxEnemySpawns);
 
@@ -37,9 +37,10 @@ public class EnemySpawner : MonoBehaviour
 
         
     }
+    */
 
 
-    private Vector2 GetRandomPosition(Room room)
+    /*private Vector2 GetRandomPosition(Room room)
     {
         BoxCollider2D roomCollider = room.GetComponent<BoxCollider2D>();
         Vector2 colliderPos = roomCollider.transform.position;
@@ -48,6 +49,8 @@ public class EnemySpawner : MonoBehaviour
         
         return new Vector2(randomPosX, randomPosY);
     }
+    */
+    
 
 
 
