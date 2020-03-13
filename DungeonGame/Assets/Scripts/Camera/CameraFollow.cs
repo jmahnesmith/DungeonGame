@@ -12,6 +12,10 @@ public class CameraFollow : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     public Vector3 offset;
+    private void Start()
+    {
+        target = FindObjectOfType<Player>().gameObject.transform;
+    }
 
     private void LateUpdate()
     {

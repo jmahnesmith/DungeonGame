@@ -31,7 +31,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Connections:
   - {fileID: 7981454077568404011}
-  CorridorIndividualRoomTemplates: []
+  CorridorIndividualRoomTemplates:
+  - {fileID: 5456900644617192662, guid: da57c89a9eacca843b578d55bfbe25ea, type: 3}
   CorridorRoomTemplateSets: []
   DefaultIndividualRoomTemplates:
   - {fileID: 5427589966193115212, guid: 04857e7f11a786e40915dbb07f5aaf21, type: 3}
@@ -58,7 +59,7 @@ MonoBehaviour:
   IndividualRoomTemplates:
   - {fileID: 8758562626074790869, guid: 7eb5e62cdedcb1942b0a99e08d4e1a4b, type: 3}
   RoomTemplateSets: []
-  Position: {x: 361, y: 279.5}
+  Position: {x: 327, y: 256.5}
 --- !u!114 &7981454077568404011
 MonoBehaviour:
   m_ObjectHideFlags: 0
