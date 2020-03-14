@@ -32,11 +32,17 @@ namespace Assets.ProceduralLevelGenerator.Scripts.Generators.DungeonGenerator
         [Expandable]
         public AdvancedConfig AdvancedConfig;
 
+        //Event fires when dungeon is finished generating.
+        public delegate void DungeonGenerationCompleteEventHandler();
+        public event DungeonGenerationCompleteEventHandler OnDungeonGenComplete;
+
         public void Start()
         {
             if (OtherConfig.GenerateOnStart)
             {
                 Generate();
+                //Fire On Dungeon Generation complete event.
+                OnDungeonGenComplete?.Invoke();
             }
         }
 
@@ -79,6 +85,7 @@ namespace Assets.ProceduralLevelGenerator.Scripts.Generators.DungeonGenerator
             PipelineRunner.Run(pipelineItems, payload);
 
             Debug.Log($"--- Level generated in {stopwatch.ElapsedMilliseconds / 1000f:F}s ---");
+            
         }
 
         private PipelineItem GetInputTask()
