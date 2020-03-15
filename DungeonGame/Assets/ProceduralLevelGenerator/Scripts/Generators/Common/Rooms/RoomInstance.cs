@@ -84,6 +84,21 @@ namespace Assets.ProceduralLevelGenerator.Scripts.Generators.Common.Rooms
         public Polygon2D OutlinePolygon => outlinePolygon;
         [SerializeField] private Polygon2D outlinePolygon;
 
+
+        //States
+        
+        public bool enemyInRoom = false;
+        public bool playerInRoom = false;
+        public bool doorsClosed = false;
+        public bool roomDefeated = false;
+        public bool canSpawnEnemy = true;
+        public int minEnemySpawns = 3;
+        public int maxEnemySpawns = 10;
+
+        //Events
+        public delegate void NextRoomDelegate(RoomInstance room);
+        public static event NextRoomDelegate OnPlayerEnterRoom;
+
         public RoomInstance(Room room, bool isCorridor, Connection connection, GameObject roomTemplatePrefab, GameObject roomTemplateInstance, Vector3Int position, Polygon2D outlinePolygon)
         {
             this.room = room;
@@ -104,5 +119,34 @@ namespace Assets.ProceduralLevelGenerator.Scripts.Generators.Common.Rooms
         {
             this.doors = doors;
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            
+            if (collision.tag == "Enemy")
+            {
+                enemyInRoom = true;
+            }
+            
+            if (collision.tag == "Player")
+            {
+                playerInRoom = true;
+                OnPlayerEnterRoom?.Invoke(this);
+            }
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.tag == "Enemy")
+            {
+                if (GameObject.FindGameObjectsWithTag("Enemy").Length - 1 == 0)
+                    enemyInRoom = false;
+                roomDefeated = true;
+            }
+            if (collision.tag == "Player")
+            {
+                playerInRoom = false;
+            }
+        }
+
     }
 }
