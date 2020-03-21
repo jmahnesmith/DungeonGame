@@ -2,12 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int health = 100;
+    public float health = 100f;
     public AudioClip deathNoise;
-    private int curHealth;
+    public float curHealth;
     public float invincibleTime = 0;
     private bool invincible = false;
 
@@ -28,12 +29,12 @@ public class Health : MonoBehaviour
     }
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         if(!invincible)
         {
             StartCoroutine(Flash(_sprite, _firstColor, _secondColor, colorDuration));
-            curHealth = curHealth - damage;
+            curHealth = curHealth - damage;            
             invincible = true;
             StartCoroutine(ToggleInvincible());
         }

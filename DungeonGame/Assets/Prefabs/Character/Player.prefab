@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7025547702889846859}
   - component: {fileID: 1240415999602084300}
   - component: {fileID: 2571641276659851986}
-  - component: {fileID: 2838411927146370613}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -166,6 +165,7 @@ MonoBehaviour:
   health: 100
   deathNoise: {fileID: 8300000, guid: 9a74432d288200846aeeeaee34ed7c23, type: 3}
   invincibleTime: 0.5
+  healthBar: {fileID: 0}
 --- !u!114 &2571641276659851986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,18 +179,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
---- !u!114 &2838411927146370613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7025547702889846856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa295fe759ddff940a4666c826b56693, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  deathNoise: {fileID: 8300000, guid: de028324ad0d85f469f975f100101916, type: 3}
-  invincibleTime: 0

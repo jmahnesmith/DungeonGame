@@ -21,7 +21,7 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        canShoot = false;
+        canShoot = false;        
     }
 
     private void Update()

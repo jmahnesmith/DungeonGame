@@ -23,7 +23,7 @@ public class LaserShoot : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
             if (hit.collider.tag == "Player")
-                hit.transform.GetComponent<Health>().TakeDamage(25);
+                hit.transform.GetComponent<Health>().TakeDamage(25f);
 
             line.SetPosition(0, transform.position);
             line.SetPosition(1, hit.point);
