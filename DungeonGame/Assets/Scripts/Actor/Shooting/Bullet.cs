@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public float bulletVolume = 10f;
     public int damage = 25;
     private AudioSource explosionSound;
 
@@ -21,7 +22,7 @@ public class Bullet : MonoBehaviour
                 ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.HitParticleSmall);
             }
             
-            AudioSource.PlayClipAtPoint(explosionSound.clip, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(explosionSound.clip, Camera.main.transform.position, bulletVolume);
             if(collision.tag == "Enemy")
             {
                 collision.GetComponent<Health>().TakeDamage(damage);

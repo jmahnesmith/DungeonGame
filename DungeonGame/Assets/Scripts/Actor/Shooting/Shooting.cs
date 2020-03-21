@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    [SerializeField] float bulletVolume = 10f;
     public Transform[] firePoint;
     public GameObject bulletPrefab;
     public CameraShake cameraShake;
@@ -57,7 +58,7 @@ public class Shooting : MonoBehaviour
 
     private void PlayShootingSound()
     {
-        AudioSource.PlayClipAtPoint(firingSound, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(firingSound, Camera.main.transform.position, bulletVolume);
     }
 
     public void ToggleShooting()
