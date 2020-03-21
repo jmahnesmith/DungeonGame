@@ -42,7 +42,7 @@ public class AudioSyncWithLaser : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
             if (hit.collider.tag == "Player")
-                hit.transform.GetComponent<Health>().TakeDamage(25);
+                hit.transform.GetComponent<Health>().TakeDamage(25f);
         }
 
         //line.SetPositions(new Vector3[] { transform.position, endPosition });

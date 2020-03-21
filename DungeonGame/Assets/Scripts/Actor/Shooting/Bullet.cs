@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float bulletVolume = 10f;
-    public int damage = 25;
+    public float damage = 25f;
     private AudioSource explosionSound;
 
     private void Awake()
