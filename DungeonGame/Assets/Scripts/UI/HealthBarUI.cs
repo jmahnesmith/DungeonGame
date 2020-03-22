@@ -6,21 +6,39 @@ using UnityEngine.UI;
 public class HealthBarUI : MonoBehaviour
 {
     public Health playerHealth;
-    private Image healthBar;
-    
-    private void Start()
+    public Sprite fullHealthImage;
+    public Sprite emptyHeartImage;
+    public Image[] hearts;
+
+    private void Update()
     {
-        healthBar = GetComponent<Image>();
+        if(playerHealth.curHealth > playerHealth.health)
+        {
+            playerHealth.curHealth = playerHealth.health;
+        }
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if(i < playerHealth.curHealth)
+            {
+                hearts[i].sprite = fullHealthImage;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeartImage;
+            }
+            if(i < playerHealth.health)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
     }
 
-
-    void Update()
+    private void DisplayHearts()
     {
-        HealthChanging();
-    }
-
-    private void HealthChanging()
-    {
-        healthBar.fillAmount = playerHealth.curHealth / playerHealth.health;
+        
     }
 }

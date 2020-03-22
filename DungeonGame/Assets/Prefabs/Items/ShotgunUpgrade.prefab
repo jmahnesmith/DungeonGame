@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65a3ddfcfea28f4096ddb89afadc152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletVolume: 0.5
   firePoint:
   - {fileID: 893381930512964734}
   - {fileID: 6479344747572800123}
@@ -223,7 +224,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9be91b11cfd851249b282bb84a802337, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.665
+  m_Volume: 0.054
   m_Pitch: 1
   Loop: 0
   Mute: 0

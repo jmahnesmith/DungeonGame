@@ -592,8 +592,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa295fe759ddff940a4666c826b56693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 4
   deathNoise: {fileID: 8300000, guid: 9a74432d288200846aeeeaee34ed7c23, type: 3}
+  audioClipVolume: 0.5
+  curHealth: 0
   invincibleTime: 0
 --- !u!114 &6504255068662070752
 MonoBehaviour:
@@ -628,6 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b524beacc6f694dbd50343b54c7af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 1
 --- !u!1 &8924018469501462531
 GameObject:
   m_ObjectHideFlags: 0

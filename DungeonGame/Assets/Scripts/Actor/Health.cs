@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float health = 100f;
+    public float health = 3f;
     public AudioClip deathNoise;
+    public float audioClipVolume = 0.5f;
     public float curHealth;
     public float invincibleTime = 0;
     private bool invincible = false;

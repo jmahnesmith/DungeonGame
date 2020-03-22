@@ -1,10 +1,2 @@
 Base path: C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/2019.1.3f1/Editor/Data
 Cmd: initializeCompiler
-Cmd: compileComputeKernel
-  api=4 insize=3070 outsize=48145 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=4855 outsize=4141 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=3396 outsize=2681 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=18299 outsize=8925 ok=1
