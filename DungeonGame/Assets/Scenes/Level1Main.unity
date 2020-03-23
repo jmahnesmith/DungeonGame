@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImageHealthFull (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -268,6 +273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -458,7 +468,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &420205299
 PrefabInstance:
@@ -471,6 +481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -620,6 +635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -971,7 +991,7 @@ PrefabInstance:
     - target: {fileID: 6479344749035688825, guid: 4fe4c258a1c0ad845a92fa276252110b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6479344749035688825, guid: 4fe4c258a1c0ad845a92fa276252110b,
         type: 3}
@@ -1023,7 +1043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781409946}
   - component: {fileID: 781409947}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -834, y: 383}
+  m_AnchoredPosition: {x: -828.3, y: 383}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781409947
@@ -1096,6 +1116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -1215,6 +1240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -1382,7 +1412,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1204268811
 PrefabInstance:
@@ -1395,6 +1425,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -1503,6 +1538,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db45d1fff42a07645a0189970940c3d2, type: 3}
+--- !u!1001 &1237813104
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2838794582909597740, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_Name
+      value: LaserEnemyTeal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.068695
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.135605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031238705356937204, guid: a76ae3e6f90ec9840a221c3ed95ed7c6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a76ae3e6f90ec9840a221c3ed95ed7c6, type: 3}
 --- !u!1001 &1401681950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1514,6 +1618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -2004,7 +2113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1591004058
 MonoBehaviour:
@@ -2149,7 +2258,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1742737574
 GameObject:
@@ -2163,7 +2272,7 @@ GameObject:
   - component: {fileID: 1742737577}
   - component: {fileID: 1742737576}
   - component: {fileID: 1742737575}
-  m_Layer: 12
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2243,7 +2352,7 @@ RectTransform:
   m_Children:
   - {fileID: 781409946}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2297,6 +2406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -2480,7 +2594,7 @@ PrefabInstance:
     - target: {fileID: 1128872802762612638, guid: f497260705bd38a42997a326c8b29557,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1128872802762612638, guid: f497260705bd38a42997a326c8b29557,
         type: 3}
@@ -2560,7 +2674,7 @@ PrefabInstance:
     - target: {fileID: 7025547702889846863, guid: db2e893f1cf0a964b8d6d1e9710b5aff,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7025547702889846863, guid: db2e893f1cf0a964b8d6d1e9710b5aff,
         type: 3}
@@ -2638,7 +2752,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5620386990398844413
 GameObject:
@@ -2785,7 +2899,7 @@ Transform:
   - {fileID: 5620386992136151797}
   - {fileID: 5620386990593623914}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5620386991043549186
 MonoBehaviour:
@@ -3021,7 +3135,7 @@ PrefabInstance:
     - target: {fileID: 5808316678568602392, guid: 572d5dec19cb8f04eaf7ba14eaf6cc3c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5808316678568602392, guid: 572d5dec19cb8f04eaf7ba14eaf6cc3c,
         type: 3}
@@ -3056,6 +3170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImageHealthFull
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061273917544759045, guid: db45d1fff42a07645a0189970940c3d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8061273917544759044, guid: db45d1fff42a07645a0189970940c3d2,
         type: 3}
@@ -3193,5 +3312,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

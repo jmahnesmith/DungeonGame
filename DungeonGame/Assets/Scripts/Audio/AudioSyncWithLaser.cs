@@ -6,9 +6,11 @@ public class AudioSyncWithLaser : MonoBehaviour
 {
     public float maxLineIntensity;
     public float minLineIntensity;
+    public float damage = 1f;
 
     private LineRenderer line;
     private BeatEvent beat;
+
     private IEnumerator MoveToIntensity(int intencity)
     {
 
@@ -32,17 +34,17 @@ public class AudioSyncWithLaser : MonoBehaviour
         }
 
     }
-    void Update()
+    void LateUpdate()
     {
         Vector2 laserDirection = transform.right;
-        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, laserDirection, GetLaserLength().magnitude);
+        RaycastHit2D hit = Physics2D.Raycast(this.transform.position, laserDirection, GetLaserLength().magnitude - 4);
         Debug.DrawRay(this.transform.position, laserDirection, Color.green);
 
         if (hit)
         {
             Debug.Log(hit.transform.name);
             if (hit.collider.tag == "Player")
-                hit.transform.GetComponent<Health>().TakeDamage(25f);
+                hit.transform.GetComponent<Health>().TakeDamage(damage);
         }
 
         //line.SetPositions(new Vector3[] { transform.position, endPosition });
@@ -55,7 +57,7 @@ public class AudioSyncWithLaser : MonoBehaviour
 
     Vector3 GetLaserLength()
     {
-        Debug.Log(line.endWidth);
+        Debug.Log(transform.TransformPoint(line.GetPosition(1)).magnitude - 4);
         return transform.TransformPoint(line.GetPosition(1));
     }
 
