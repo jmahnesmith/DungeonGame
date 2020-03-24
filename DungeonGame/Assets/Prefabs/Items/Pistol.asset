@@ -9,13 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4172cab78ef234648af1a8a56f7c19f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 956041b2e2b42a24d81eccf8004fd3a3, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: 
   itemID: 0
-  itemName: Pistol
-  itemDesc: Its dangerous to go alone, take this.
-  bulletPrefab: {fileID: 0}
-  fireForce: 2
-  damage: 0
-  coolDownTime: 0
+  gunName: Pistol
+  gunDesc: Desc
+  gunSprite: {fileID: 21300000, guid: e8d7f9f405c704641b83e0ebbb83fb86, type: 3}
+  gunSound: {fileID: 8300000, guid: 60b97136923b1434dbfaa5da730d9954, type: 3}
+  gunBaseCoolDown: 1
+  projectileForce: 5
+  projectilePrefab: {fileID: 3854601101547628396, guid: 7061132baa895f24bbe2e3d54e1f082c,
+    type: 3}
+  damage: 1
+  coolDownTime: 1

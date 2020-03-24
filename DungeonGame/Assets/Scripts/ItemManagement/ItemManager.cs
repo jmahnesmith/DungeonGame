@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotgunItem : Gun
+public class ItemManager : MonoBehaviour
 {
-
+    public List<Gun> itemList;
 }

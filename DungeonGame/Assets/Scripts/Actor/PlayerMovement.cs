@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(PlayerInput))]
@@ -20,68 +21,72 @@ public class PlayerMovement : Actor
     //Color effects Params
     float colorDuration = 5;
     float smoothness = 0.02f;
-    bool _changingColor = false;
+    
     Color32 _firstColor;
     Color32 _secondColor = new Color32(255, 255, 255, 255);
 
     private bool colorSignalDone = false;
 
+    //Events
+    public event Action OnCanDash = delegate { };
 
     private CameraShake cameraShake;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         cameraShake = FindObjectOfType<CameraShake>();
         _firstColor = GetComponent<SpriteRenderer>().color;
+
+        //Subscribe to events
+        playerInput.OnDash += PlayerInput_OnDash;
     }
+
+
+    private void PlayerInput_OnDash()
+    {
+        if (canDash)
+        {
+            if (playerInput.Horizontal > 0)
+            {
+                //Dash Right
+                Dash(Vector2.right.normalized);
+
+            }
+            else if (playerInput.Horizontal < 0)
+            {
+                //Dash Left
+               
+                Dash(Vector2.left.normalized);
+            }
+            else if (playerInput.Vertical > 0)
+            {
+                //Dash Up
+                
+                Dash(Vector2.up.normalized);
+            }
+            else if (playerInput.Vertical < 0)
+            {
+                //Dash back
+                
+                Dash(Vector2.down.normalized);
+            }
+            else
+            {
+                
+                Dash(((Vector3)playerInput.MousePosition - transform.position).normalized);
+            }
+        }
+    }
+
+    
 
 
     private void Update()
     {
         Aim(playerInput.MousePosition);
         Move(new Vector2(playerInput.Horizontal, playerInput.Vertical));
-
-
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (canDash)
-            {
-                if (playerInput.Horizontal > 0)
-                {
-                    //Dash Right
-                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
-                    Dash(Vector2.right.normalized);
-
-                }
-                else if (playerInput.Horizontal < 0)
-                {
-                    //Dash Left
-                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
-                    Dash(Vector2.left.normalized);
-                }
-                else if (playerInput.Vertical > 0)
-                {
-                    //Dash Up
-                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
-                    Dash(Vector2.up.normalized);
-                }
-                else if (playerInput.Vertical < 0)
-                {
-                    //Dash back
-                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
-                    Dash(Vector2.down.normalized);
-                }
-                else
-                {
-                    ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.DashParticle);
-                    Dash(((Vector3)playerInput.MousePosition - transform.position).normalized);
-                }
-            }
-        }
+                       
     }
 
     private void FixedUpdate()
@@ -93,8 +98,9 @@ public class PlayerMovement : Actor
             if (!colorSignalDone)
             {
                 colorSignalDone = true;
-                StartCoroutine(OnCanDash(_firstColor, _secondColor, 1f));
-
+                OnCanDash();
+                //AudioSource.PlayClipAtPoint(CanDashSound, Camera.main.transform.position, 0.4f);
+                StartCoroutine(Flash.FlashTarget(_firstColor, _secondColor, 1f, GetComponent<SpriteRenderer>()));
             }
 
         }
@@ -134,34 +140,5 @@ public class PlayerMovement : Actor
         dashing = false;
         rb.angularVelocity = 0f;
         canDash = false;
-    }
-
-
-    private IEnumerator OnCanDash(Color32 firstColor, Color32 secondColor, float duration)
-    {
-        if (canDash)
-        {
-            if (_changingColor)
-            {
-                yield break;
-            }
-            _changingColor = true;
-            SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-            float counter = 0;
-            AudioSource.PlayClipAtPoint(CanDashSound, Camera.main.transform.position, 0.4f);
-            while (counter < duration)
-            {
-                counter += Time.deltaTime;
-
-                sprite.color = Color32.Lerp(firstColor, secondColor, (counter / 2) / (duration / 2));
-                sprite.color = Color32.Lerp(secondColor, firstColor, (counter / 2) / (duration / 2));
-
-                yield return null;
-            }
-
-
-            _changingColor = false;
-
-        }
     }
 }

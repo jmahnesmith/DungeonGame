@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour
     public bool FireWeapons { get; private set; }
 
     public event Action OnFire = delegate { };
+    public event Action OnDash = delegate { };
 
     private void Update()
     {
@@ -22,5 +23,7 @@ public class PlayerInput : MonoBehaviour
         Dash = Input.GetKeyDown(KeyCode.Space);
         if (FireWeapons)
             OnFire();
+        if (Dash)
+            OnDash();
     }
 }
