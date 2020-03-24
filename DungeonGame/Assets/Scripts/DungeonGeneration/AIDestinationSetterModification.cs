@@ -10,7 +10,7 @@ public class AIDestinationSetterModification : MonoBehaviour
     void Awake()
     {
         aiDestinationSetter = GetComponent<AIDestinationSetter>();
-        aiDestinationSetter.target = FindObjectOfType<Player>().transform;
+        //aiDestinationSetter.target = FindObjectOfType<Player>().transform;
     }
 
     // Update is called once per frame

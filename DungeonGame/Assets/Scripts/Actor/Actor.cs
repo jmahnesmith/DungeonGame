@@ -7,14 +7,13 @@ public class Actor : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
 
-    
-
     protected void Aim(Vector3 target)
     {
         Vector2 dir = transform.position - target;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
     }
+
     protected void Move(Vector2 dir)
     {
         float pen = 1;
@@ -23,13 +22,6 @@ public class Actor : MonoBehaviour
             pen = 1.35f;
         }
 
-        rb.velocity = dir.normalized * GetSpeed() * pen;
+        rb.velocity = dir.normalized * speed * pen;
     }
-
-    protected virtual float GetSpeed()
-    {
-        return speed;
-    }
-
-    
 }
