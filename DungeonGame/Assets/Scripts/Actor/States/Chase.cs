@@ -7,12 +7,13 @@ public class Chase : State
 {
     public Chase(AIPath aiPath, StateMachine stateMachine, EnemyMovement enemyMovement) : base(aiPath, stateMachine, enemyMovement)
     {
-
+        
     }
 
     public override void Enter()
     {
-       
+        base.Enter();
+        
     }
 
     public override void Exit()
