@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
             }
 
             AudioSource.PlayClipAtPoint(collisionSound, Camera.main.transform.position, bulletVolume);
-            if (collision.tag == "Enemy")
+            if (collision.tag == "Enemy" || collision.tag == "Player")
             {
                 collision.GetComponent<Health>().TakeDamage(damage);
                 ParticleManager.Instance.PlayParticle(transform.position, ParticleManager.ParticleEnum.HitParticleSmall);
