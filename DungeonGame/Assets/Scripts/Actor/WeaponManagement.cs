@@ -20,7 +20,7 @@ public class WeaponManagement : MonoBehaviour
         Initialize(gun, weaponHolder);
     }
 
-    private void FireWeapon()
+    public void FireWeapon()
     {
         AudioSource.PlayClipAtPoint(gun.gunSound, Camera.main.transform.position, 0.5f);
         gun.TriggerItem();

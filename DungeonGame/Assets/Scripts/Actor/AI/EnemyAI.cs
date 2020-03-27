@@ -6,13 +6,15 @@ using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
     StateMachine stateMachine;
+    AIPath aiPath;
+    EnemyMovement enemyMovement;
+    Rigidbody2D playerPosition;
     Chase chase;
 
     private void Start()
     {
         stateMachine = new StateMachine();
-        chase = new Chase(GetComponent<AIPath>(), stateMachine, GetComponent<EnemyMovement>());
-
+        chase = new Chase(aiPath, stateMachine, enemyMovement);
         stateMachine.Initialize(chase);
 
     }
