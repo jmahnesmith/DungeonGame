@@ -5,15 +5,14 @@ using UnityEngine;
 
 public class Chase : State
 {
-    public Chase(AIPath aiPath, StateMachine stateMachine, EnemyMovement enemyMovement) : base(aiPath, stateMachine, enemyMovement)
+    public Chase(EnemyAI enemyAI) : base(enemyAI)
     {
-        
+
     }
 
     public override void Enter()
     {
         base.Enter();
-        aiPath.canMove = true;
         
     }
 

@@ -19,7 +19,7 @@ public class PlayerInput : MonoBehaviour
         Horizontal = Input.GetAxis("Horizontal");
         Vertical = Input.GetAxis("Vertical");
         MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        FireWeapons = Input.GetButtonDown("Fire1");
+        FireWeapons = Input.GetButton("Fire1");
         Dash = Input.GetKeyDown(KeyCode.Space);
         if (FireWeapons)
             OnFire();

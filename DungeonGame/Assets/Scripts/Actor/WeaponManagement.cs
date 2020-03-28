@@ -7,23 +7,40 @@ public class WeaponManagement : MonoBehaviour
 {
     [SerializeField] private Gun gun;
     [SerializeField] private GameObject weaponHolder;
-    private float coolDownDuration;
-    private float nextReadyTime;
-    private float coolDownTimeLeft;
+    [SerializeField] float coolDownDuration;
+    [SerializeField] bool isEnemy = false;
+    [SerializeField] bool canShoot = true;
 
     private PlayerInput playerInput;
 
     private void Start()
     {
-        playerInput = GetComponent<PlayerInput>();
+        //Declare can shoot at start
+        canShoot = true;
+        //Declare player fire event
+        if(playerInput = GetComponent<PlayerInput>())
         playerInput.OnFire += FireWeapon;
-        Initialize(gun, weaponHolder);
+        //Clone the scriptable object
+        var clone = Instantiate(gun);
+        Initialize(clone, weaponHolder);
+    }
+
+    private void Update()
+    {
+        if(isEnemy)
+        {
+            FireWeapon();
+        }
     }
 
     public void FireWeapon()
     {
-        AudioSource.PlayClipAtPoint(gun.gunSound, Camera.main.transform.position, 0.5f);
-        gun.TriggerItem();
+        if(canShoot)
+        {
+            AudioSource.PlayClipAtPoint(gun.gunSound, Camera.main.transform.position, 0.25f);
+            gun.TriggerItem();
+            StartCoroutine(CoolDownCoroutine(coolDownDuration));
+        }
     }
 
     public void Initialize(Gun selectedGun, GameObject weaponHolder)
@@ -33,8 +50,12 @@ public class WeaponManagement : MonoBehaviour
         gun.Initialize(weaponHolder);
         
     }
-    private void Update()
+
+    IEnumerator CoolDownCoroutine (float coolDownTime)
     {
-        
+        canShoot = false;
+        yield return new WaitForSeconds(coolDownTime);
+        canShoot = true;
     }
+
 }

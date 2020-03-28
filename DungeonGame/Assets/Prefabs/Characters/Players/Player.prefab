@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1460252223}
   - component: {fileID: 1460252230}
   - component: {fileID: 3087877972118741732}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -225,6 +225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gun: {fileID: 11400000, guid: 7ef299a1dae50534caee6a2a9cfb4499, type: 2}
   weaponHolder: {fileID: 8193532492108566090}
+  coolDownDuration: 0
+  isEnemy: 0
+  canShoot: 0
 --- !u!1 &8193532492108566090
 GameObject:
   m_ObjectHideFlags: 0

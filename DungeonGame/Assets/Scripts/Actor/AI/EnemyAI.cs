@@ -5,16 +5,24 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-    StateMachine stateMachine;
-    AIPath aiPath;
-    EnemyMovement enemyMovement;
-    Rigidbody2D playerPosition;
-    Chase chase;
+    public StateMachine stateMachine { get; private set; }
+    public AIPath aiPath { get; private set; }
+    public EnemyMovement enemyMovement { get; private set; }
+    public Vector3 playerPosition { get; private set; }
+
+    private Chase chase;
+
+    private void Awake()
+    {
+        aiPath = GetComponent<AIPath>();
+        enemyMovement = GetComponent<EnemyMovement>();
+        playerPosition = aiPath.destination;
+    }
 
     private void Start()
     {
         stateMachine = new StateMachine();
-        chase = new Chase(aiPath, stateMachine, enemyMovement);
+        chase = new Chase(this);
         stateMachine.Initialize(chase);
 
     }
@@ -27,4 +35,5 @@ public class EnemyAI : MonoBehaviour
     {
         stateMachine.CurrentState.PhysicsUpdate();
     }
+    
 }
