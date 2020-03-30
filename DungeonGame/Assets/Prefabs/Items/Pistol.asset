@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956041b2e2b42a24d81eccf8004fd3a3, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: 
+  itemID: 0
+  gunName: Pistol
+  gunDesc: Desc
+  gunSprite: {fileID: 21300000, guid: e8d7f9f405c704641b83e0ebbb83fb86, type: 3}
+  gunSound: {fileID: 8300000, guid: 60b97136923b1434dbfaa5da730d9954, type: 3}
+  gunBaseCoolDown: 1
+  projectileForce: 5
+  projectilePrefab: {fileID: 3854601101547628396, guid: 7061132baa895f24bbe2e3d54e1f082c,
+    type: 3}
+  damage: 1
+  coolDownTime: 1

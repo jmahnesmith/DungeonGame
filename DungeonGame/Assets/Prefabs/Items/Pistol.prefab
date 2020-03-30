@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5808316678568602392}
   - component: {fileID: 5808316678568602393}
-  - component: {fileID: 5808316678568602394}
-  - component: {fileID: 5808316678568602395}
   - component: {fileID: 9002872288380241752}
   m_Layer: 0
   m_Name: Pistol
@@ -80,47 +78,9 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5808316678568602394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5808316678568602398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd657740294aac448bfaf5fba539b33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemID: 0
-  itemName: Shotgun
-  itemDesc: Blast that ass
-  isEquiped: 0
---- !u!114 &5808316678568602395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5808316678568602398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a65a3ddfcfea28f4096ddb89afadc152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletVolume: 0.5
-  firePoint:
-  - {fileID: 5808316679292299059}
-  bulletPrefab: {fileID: 2468361553768818435, guid: 0e8e311c2386b924ea35950ebc0c8d9b,
-    type: 3}
-  cameraShake: {fileID: 0}
-  firingSound: {fileID: 8300000, guid: 60b97136923b1434dbfaa5da730d9954, type: 3}
-  bulletForce: 20
-  fireRate: 0.5
-  canShoot: 0
 --- !u!61 &9002872288380241752
 BoxCollider2D:
   m_ObjectHideFlags: 0
