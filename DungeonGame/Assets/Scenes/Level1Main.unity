@@ -2456,6 +2456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4496677373977982494, guid: f63764a5c0c6b784d8897d2c20ff9221,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4496677373977982490, guid: f63764a5c0c6b784d8897d2c20ff9221,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2511,6 +2516,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1460252230, guid: f63764a5c0c6b784d8897d2c20ff9221, type: 3}
+      propertyPath: OnDashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3f6f72dbad449dd449b5881882121cce, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f63764a5c0c6b784d8897d2c20ff9221, type: 3}
 --- !u!114 &5620386990398844408
@@ -3085,6 +3094,21 @@ PrefabInstance:
         type: 3}
       propertyPath: obstacleMask.m_Bits
       value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832302263440709078, guid: 5887888ce1a88a242bf0db170641963e,
+        type: 3}
+      propertyPath: radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832302263440709078, guid: 5887888ce1a88a242bf0db170641963e,
+        type: 3}
+      propertyPath: slowdownDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7832302263440709078, guid: 5887888ce1a88a242bf0db170641963e,
+        type: 3}
+      propertyPath: endReachedDistance
+      value: 10.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5887888ce1a88a242bf0db170641963e, type: 3}

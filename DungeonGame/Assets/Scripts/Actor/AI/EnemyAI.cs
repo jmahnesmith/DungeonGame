@@ -6,24 +6,16 @@ using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
     public StateMachine stateMachine { get; private set; }
-    public AIPath aiPath { get; private set; }
-    public EnemyMovement enemyMovement { get; private set; }
-    public Vector3 playerPosition { get; private set; }
 
-    private Chase chase;
+    public AIPath aiPath;
 
-    private void Awake()
-    {
-        aiPath = GetComponent<AIPath>();
-        enemyMovement = GetComponent<EnemyMovement>();
-        playerPosition = aiPath.destination;
-    }
-
+    //Chase chase;
     private void Start()
     {
+        aiPath = GetComponent<AIPath>();
         stateMachine = new StateMachine();
-        chase = new Chase(this);
-        stateMachine.Initialize(chase);
+        //chase = new Chase(this);
+        //stateMachine.Initialize(chase);
 
     }
     private void Update()

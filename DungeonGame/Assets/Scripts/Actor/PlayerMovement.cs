@@ -15,12 +15,6 @@ public class PlayerMovement : Actor
     public int dashDuration = 35;
     protected int dashC;
     public bool canDash;
-    //Audio Params
-    public AudioClip CanDashSound;
-
-    //Color effects Params
-    float colorDuration = 5;
-    float smoothness = 0.02f;
     
     Color32 _firstColor;
     Color32 _secondColor = new Color32(255, 255, 255, 255);
@@ -99,7 +93,6 @@ public class PlayerMovement : Actor
             {
                 colorSignalDone = true;
                 OnCanDash();
-                //AudioSource.PlayClipAtPoint(CanDashSound, Camera.main.transform.position, 0.4f);
                 StartCoroutine(Flash.FlashTarget(_firstColor, _secondColor, 1f, GetComponent<SpriteRenderer>()));
             }
 

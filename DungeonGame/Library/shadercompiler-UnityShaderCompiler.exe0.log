@@ -1,12 +1,2 @@
 Base path: C:/Program Files (x86)/Microsoft Visual Studio 14.0/Common7/IDE/2019.1.3f1/Editor/Data
 Cmd: initializeCompiler
-Cmd: preprocess
-  insize=683 outsize=683 ok=1
-Cmd: preprocess
-  insize=838 outsize=838 ok=1
-Cmd: preprocess
-  insize=2619 outsize=463 ok=1
-Cmd: preprocess
-  insize=2191 outsize=817 ok=1
-Cmd: preprocess
-  insize=2445 outsize=2445 ok=1
