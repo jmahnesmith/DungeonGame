@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4496677373977982488}
   - component: {fileID: 4496677373977982487}
   - component: {fileID: 4496677373977982491}
+  - component: {fileID: 6615110375687871527}
   - component: {fileID: 4496677373977982492}
   - component: {fileID: 4496677373977982493}
   - component: {fileID: 4496677373977982489}
@@ -137,6 +138,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6615110375687871527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496677373977982494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c8d6f1ba3716dc41934edd10ee9a6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4496677373977982492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +195,6 @@ MonoBehaviour:
   rb: {fileID: 4496677373977982488}
   dashDuration: 20
   canDash: 0
-  CanDashSound: {fileID: 8300000, guid: 3f6f72dbad449dd449b5881882121cce, type: 3}
 --- !u!114 &1460252223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnCanDashSound: {fileID: 8300000, guid: 3f6f72dbad449dd449b5881882121cce, type: 3}
+  OnDashSound: {fileID: 0}
   volume: 0.5
 --- !u!114 &3087877972118741732
 MonoBehaviour:

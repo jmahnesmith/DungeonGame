@@ -7,12 +7,12 @@ public class EnemyAI : MonoBehaviour
 {
     public StateMachine stateMachine { get; private set; }
 
-    public AIPath aiPath;
+    public AstarAI aiPath;
 
     //Chase chase;
     private void Start()
     {
-        aiPath = GetComponent<AIPath>();
+        aiPath = GetComponent<AstarAI>();
         stateMachine = new StateMachine();
         //chase = new Chase(this);
         //stateMachine.Initialize(chase);

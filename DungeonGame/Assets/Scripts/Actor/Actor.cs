@@ -9,7 +9,7 @@ public class Actor : MonoBehaviour
 
     protected void Aim(Vector3 target)
     {
-        Vector2 dir = transform.position - target;
+        Vector2 dir = (transform.position - target).normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle + 90));
     }

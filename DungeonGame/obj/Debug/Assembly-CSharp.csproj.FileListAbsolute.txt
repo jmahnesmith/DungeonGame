@@ -215,3 +215,8 @@ D:\Projects\Unity\DungeonGame\DungeonGame\obj\Debug\Assembly-CSharp.pdb
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Pathfinding.ClipperLib.dll
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Pathfinding.Ionic.Zip.Reduced.dll
 D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Pathfinding.Poly2Tri.dll
+D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\Boo.Lang.dll
+D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\UnityEditor.UI.dll
+D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\AstarPathfindingProject.pdb
+D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\PackageToolsEditor.pdb
+D:\Projects\Unity\DungeonGame\DungeonGame\Temp\bin\Debug\AstarPathfindingProjectEditor.pdb

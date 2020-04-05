@@ -5,12 +5,10 @@ using UnityEngine;
 
 public abstract class State
 {
-    EnemyAI enemyAI;
-
-    public State(EnemyAI enemyAI)
+    private AstarAI path;
+    public State(AstarAI path)
     {
-        this.enemyAI = enemyAI;
-        enemyAI.aiPath.canMove = true;
+        this.path = path;
     }
     public virtual void Enter()
     {
