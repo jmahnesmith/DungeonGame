@@ -1776,7 +1776,8 @@ PrefabInstance:
       propertyPath: rayCastLayerMask.m_Bits
       value: 15667
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7832302263440709081, guid: 5887888ce1a88a242bf0db170641963e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5887888ce1a88a242bf0db170641963e, type: 3}
 --- !u!224 &1082057357 stripped
 RectTransform:

@@ -9,6 +9,7 @@ public class WeaponManagement : MonoBehaviour
     [SerializeField] private GameObject weaponHolder;
     [SerializeField] float coolDownDuration;
     [SerializeField] bool isEnemy = false;
+    [SerializeField] Vision vision;
     [SerializeField] bool canShoot = true;
 
     private PlayerInput playerInput;
@@ -20,6 +21,11 @@ public class WeaponManagement : MonoBehaviour
         //Declare player fire event
         if(playerInput = GetComponent<PlayerInput>())
         playerInput.OnFire += FireWeapon;
+        //Declare Vision for Enemy
+        if(isEnemy)
+        {
+            vision = GetComponentInChildren<Vision>();
+        }
         //Clone the scriptable object
         var clone = Instantiate(gun);
         Initialize(clone, weaponHolder);
@@ -29,6 +35,7 @@ public class WeaponManagement : MonoBehaviour
     {
         if(isEnemy)
         {
+            if(vision.canSeePlayer())
             FireWeapon();
         }
     }
