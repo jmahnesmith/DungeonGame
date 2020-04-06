@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1460252223}
   - component: {fileID: 1460252230}
   - component: {fileID: 3087877972118741732}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnCanDashSound: {fileID: 8300000, guid: 3f6f72dbad449dd449b5881882121cce, type: 3}
-  OnDashSound: {fileID: 0}
+  OnDashSound: {fileID: 8300000, guid: 3f6f72dbad449dd449b5881882121cce, type: 3}
   volume: 0.5
 --- !u!114 &3087877972118741732
 MonoBehaviour:
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 7970365518499423687}
   m_Layer: 0
   m_Name: GunHolder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

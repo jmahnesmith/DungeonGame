@@ -9,16 +9,24 @@ public class Vision : MonoBehaviour
     public LayerMask rayCastLayerMask;
     public bool canSeePlayer()
     {
-        var heading = targetTransform.position - transform.position;
-        var distance = heading.magnitude;
-        var direction = heading / distance;
+        var direction = targetTransform.position - transform.position;
+        
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, viewDistance, rayCastLayerMask);
-        Debug.DrawRay(transform.position, direction * viewDistance, Color.red);
+        //Debug.DrawRay(transform.position, direction * viewDistance, Color.red);
         if (hit)
         {
-            if (hit.collider.tag == "Player")
+            if (hit.collider != null)
             {
-                return true;
+                Debug.DrawLine(transform.position, hit.transform.position, Color.red);
+                if (hit.collider.tag == "Player")
+                {
+                    Debug.Log("PlayerHit");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
