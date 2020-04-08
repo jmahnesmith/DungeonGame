@@ -5,10 +5,14 @@ using UnityEngine;
 
 public abstract class State
 {
-    private AstarAI path;
-    public State(AstarAI path)
+    public AstarAI astarAI;
+    public Actor actor;
+    public Vision vision;
+    public State(AstarAI astarAI, Actor actor, Vision vision)
     {
-        this.path = path;
+        this.astarAI = astarAI;
+        this.actor = actor;
+        this.vision = vision;
     }
     public virtual void Enter()
     {

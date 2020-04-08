@@ -4,14 +4,14 @@ using UnityEngine;
 using Pathfinding;
 using System;
 
-public class AstarAI : Actor
+public class AstarAI : MonoBehaviour
 {
     public Transform targetPosition;
     private Vector3 targetDirection;
     private Seeker seeker;
     public Path path;
     public float nextWaypointDistance = 3;
-    private int currentWaypoint = 0;
+    public int currentWaypoint = 0;
     public float repathRate = 0.5f;
     public Vision vision;
     private float lastRepath = float.NegativeInfinity;
@@ -54,23 +54,9 @@ public class AstarAI : Actor
             currentWaypoint++;
             return;
         }
-        // Direction to the next waypoint
-        // Normalize it so that it has a length of 1 world unit
-        Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-        //Debug.Log("Can Enemy See Player: " + vision.canSeePlayer());
-        //Aim
-        if(vision.canSeePlayer())
-        {
-            Aim(Player.PlayerLocation.position);
-        }
-        else
-        Aim(path.vectorPath[currentWaypoint]);
 
 
-        // Multiply the direction by our desired speed to get a velocity
-        Vector3 velocity = dir * speed;
-        // Note that SimpleMove takes a velocity in meters/second, so we should not multiply by Time.deltaTime
-        base.Move(velocity);
+        
         // The commented line is equivalent to the one below, but the one that is used
         // is slightly faster since it does not have to calculate a square root
         //if (Vector3.Distance (transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
